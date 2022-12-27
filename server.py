@@ -1,4 +1,5 @@
 import json
+import requests
 from os import environ as env
 from urllib.parse import quote_plus, urlencode
 
@@ -27,7 +28,8 @@ oauth.register(
 # setting up the database
 db = SQL(env.get("DATABASE_URL"))
 
-# Controllers API
+
+# Controllers auth0 API
 @app.route("/")
 def home():
     return render_template(
@@ -59,10 +61,50 @@ def search():
     return ""
 
 
+# ANIME DETAILS
+@app.route("/details/<int:id>")
+def details(id):
+    anime_details_api = requests.get("https://kitsu.io/api/edge/anime/" + id)
+    anime_details = anime_details_api.json()
+
+    review_api = requests.get(anime_details['data']['relationships']['reviews']['links']['related'])
+    anime_reviews = review_api.json()
+
+    all_reviews = list()
+
+    for i in range(3):
+        review = anime_reviews['data'][i]
+
+        reviews = review['attributes']['content']
+
+        user_api = requests.get(review['relationships']['user']['links']['related'])
+        user = user_api.json()
+
+        try:
+            all_reviews.append({
+                "review": reviews,
+                "user": user['data']['attributes']['name'],
+                "profile": user['data']['attributes']['avatar']['original'],
+                "publish_date": user['data']['attributes']['updatedAt']
+            })
+        except:
+            ...
+
+
+    mdb = db.execute("SELECT * FROM anime WHERE kitsu_id = ?", id)
+
+    # return anime
+    return render_template(
+        "detail.html", 
+        mdb = mdb,
+        session=session.get("user"),
+        all_reviews=all_reviews,
+        anime=anime_details
+    )
+
 # /** TODO **/
 # SEND REVIEW
 # PROFILE
-# ANIME DETAILS
 
 
 @app.route("/callback", methods=["GET", "POST"])

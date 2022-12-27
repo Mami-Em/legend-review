@@ -1,5 +1,9 @@
 <p>Found {{ show | length }}</p>
 
 {% for item in show %}
-<li>{{ item['en_title'] }}</li>
+<li>
+    <a href="details/{{ item['kitsu_id'] }}">
+        {{ item['en_title'] }}
+    </a>
+</li>
 {% endfor %}
