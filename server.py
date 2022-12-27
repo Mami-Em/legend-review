@@ -3,12 +3,13 @@ from os import environ as env
 from urllib.parse import quote_plus, urlencode
 
 from authlib.integrations.flask_client import OAuth
-from flask import Flask, redirect, render_template, session, url_for
+from flask import Flask, redirect, render_template, session, url_for, request
+
+from cs50 import SQL
 
 
 app = Flask(__name__)
 app.secret_key = env.get("APP_SECRET_KEY")
-
 
 oauth = OAuth(app)
 
@@ -23,6 +24,9 @@ oauth.register(
 )
 
 
+# setting up the database
+db = SQL(env.get("DATABASE_URL"))
+
 # Controllers API
 @app.route("/")
 def home():
@@ -31,6 +35,34 @@ def home():
         session=session.get("user"),
         pretty=json.dumps(session.get("user"), indent=4),
     )
+
+
+# SEARCH
+@app.route("/search")
+def search():
+    query = request.args.get("q")
+
+    # listen to the user input
+    if len(query) >= 3:
+        show = db.execute(
+            "SELECT * FROM anime WHERE LOWER(en_title) LIKE ?",
+            "%" + query.lower() + "%"
+        )
+
+        # return any data from the db that match the user input
+        if len(show) > 0:
+            return render_template("search.html", show=show)
+
+        return "No data found"
+
+    # if input less than 3 char
+    return ""
+
+
+# /** TODO **/
+# SEND REVIEW
+# PROFILE
+# ANIME DETAILS
 
 
 @app.route("/callback", methods=["GET", "POST"])

@@ -25,6 +25,13 @@
     
 
     {% block body %}{% endblock %}
+
+    <input type="text" id="search">
+
+    <ul id="search-result"></ul>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     
 </body>
 </html>
