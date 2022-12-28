@@ -4,4 +4,56 @@
 {{ anime['data']['attributes']['titles']['en_jp'] }}
 {% endblock %}
 
-{% block body %}{% endblock %}
+{% block body %}
+<section id="review-section" class="hidden">
+    <button id="close-review-section" class="border">close</button>
+    <form id="review-form" name="sendReview">
+        <input type="text" id="anime-id" value="{{ anime['data']['id'] }}" class="hidden">
+        <textarea name="review" id="review" cols="30" rows="10" class="border"></textarea>
+        <select name="" id="">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <button class="border">Send</button>
+    </form>
+</section>
+
+
+<div>
+    <img src="{{ anime['data']['attributes']['posterImage']['original'] }}" alt="" class="w-30 h-30">
+    <img src="{{ anime['data']['attributes']['coverImage']['original'] }}" alt="" class="w-20 h-20">
+    <h2>{{ anime['data']['attributes']['titles']['en_jp'] }}</h2>
+    <p>{{ anime['data']['attributes']['titles']['ja_jp'] }}</p>
+    <a href="https://www.youtube.com/embed/{{ anime['data']['attributes']['youtubeVideoId'] }}?enablejsapi=1&wmode=opaque&autoplay=1">trailer</a>
+    <h3>Description</h3>
+    <p>{{ anime['data']['attributes']['synopsis'] }}</p>
+
+
+    <h3>Reviews</h3>
+    <ul>
+        {% for review in all_reviews %}
+        <li>
+            <img src="{{ review['profile'] }}" alt="">
+            <h4>{{ review['user'] }}</h4>
+            <p>{{ review['publish_date'] }}</p>
+            <p>{{ review['review'] }}</p>
+        </li>
+        {% endfor %}    
+    </ul>
+    <button id="write-review-btn" class="border">write review</button>
+        
+</div>
+{% endblock %}
+
+
+{% block link %}
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}

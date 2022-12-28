@@ -64,7 +64,7 @@ def search():
 # ANIME DETAILS
 @app.route("/details/<int:id>")
 def details(id):
-    anime_details_api = requests.get("https://kitsu.io/api/edge/anime/" + id)
+    anime_details_api = requests.get(f"https://kitsu.io/api/edge/anime/{id}")
     anime_details = anime_details_api.json()
 
     review_api = requests.get(anime_details['data']['relationships']['reviews']['links']['related'])
@@ -72,15 +72,16 @@ def details(id):
 
     all_reviews = list()
 
-    for i in range(3):
-        review = anime_reviews['data'][i]
-
-        reviews = review['attributes']['content']
-
-        user_api = requests.get(review['relationships']['user']['links']['related'])
-        user = user_api.json()
+    for i in range(4):
 
         try:
+            review = anime_reviews['data'][i]
+
+            reviews = review['attributes']['content']
+
+            user_api = requests.get(review['relationships']['user']['links']['related'])
+            user = user_api.json()
+
             all_reviews.append({
                 "review": reviews,
                 "user": user['data']['attributes']['name'],
@@ -91,12 +92,9 @@ def details(id):
             ...
 
 
-    mdb = db.execute("SELECT * FROM anime WHERE kitsu_id = ?", id)
-
     # return anime
     return render_template(
-        "detail.html", 
-        mdb = mdb,
+        "details.html", 
         session=session.get("user"),
         all_reviews=all_reviews,
         anime=anime_details

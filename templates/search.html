@@ -2,7 +2,7 @@
 
 {% for item in show %}
 <li>
-    <a href="details/{{ item['kitsu_id'] }}">
+    <a id="{{ item['kitsu_id'] }}" href="/details/{{ item['kitsu_id'] }}">
         {{ item['en_title'] }}
     </a>
 </li>
