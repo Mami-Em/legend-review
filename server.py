@@ -120,13 +120,13 @@ def details(id):
     myreview_db = db.execute("SELECT * FROM review review WHERE anime_id = ?", id)
     reviews = list()
     for review in myreview_db:
-        user = db.execute("SELECT _name, picture, posted_at from userdb where id = ?", review["sender_id"])
+        user = db.execute("SELECT _name, picture from userdb where id = ?", myreview_db[0]["sender_id"])
 
         reviews.append({
-            "review": myreview_db["content"],
-            "sender": user["_name"],
-            "sender_picture": user["picture"],
-            "posted_at": myreview_db["posted_at"]
+            "review": myreview_db[0]["content"],
+            "sender": user[0]["_name"],
+            "sender_picture": user[0]["picture"],
+            "posted_at": myreview_db[0]["posted_at"]
         })
 
     # return anime
@@ -134,6 +134,7 @@ def details(id):
         "details.html", 
         session=session.get("user"),
         all_reviews=all_reviews,
+        db_reviews=reviews,
         anime=anime_details
     )
 
@@ -178,6 +179,12 @@ def send_review(anime_id):
 
 # /** TODO **/
 # PROFILE
+@app.route("/profile")
+def profile():
+    if not session:
+        return "Please Login first"
+
+    return json.dumps(session.get("user"), indent=4)
 
 
 @app.route("/callback", methods=["GET", "POST"])

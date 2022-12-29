@@ -35,7 +35,17 @@
             <p>{{ review['review'] }}</p>
         </li>
         {% endfor %}    
+
+        {% for review in db_reviews %}
+        <li>
+            <img src="{{ review['sender_picture'] }}" alt="">
+            <h4>{{ review['sender'] }}</h4>
+            <p>{{ review['posted_at'] }}</p>
+            <p>{{ review['review'] }}</p>
+        </li>
+        {% endfor %}
     </ul>
+    
     <button id="write-review-btn" class="border">write review</button>
         
 </div>
