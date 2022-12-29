@@ -1,10 +1,11 @@
 import json
 import requests
+from datetime import datetime
 from os import environ as env
 from urllib.parse import quote_plus, urlencode
 
 from authlib.integrations.flask_client import OAuth
-from flask import Flask, redirect, render_template, session, url_for, request
+from flask import Flask, redirect, render_template, session, url_for, request, flash
 
 from cs50 import SQL
 
@@ -32,6 +33,30 @@ db = SQL(env.get("DATABASE_URL"))
 # Controllers auth0 API
 @app.route("/")
 def home():
+
+    if session:
+        # collect user data
+        user = {
+            "name": session.get('user')['userinfo']['name'],
+            "email": session.get('user')['userinfo']['email'],
+            "picture": session.get('user')['userinfo']['picture']
+        }
+
+        userInDb = db.execute("SELECT * FROM userdb WHERE _email = ?", user['email'])
+
+
+        registration = datetime.now()
+
+        # if user not in db yet
+        if len(userInDb) == 0:
+            db.execute(
+                "INSERT INTO userdb (_name, _email, first_login, picture) VALUES (?,?,?,?)", 
+                user['name'], 
+                user['email'],
+                registration.strftime("%B %d, %Y %I:%M %p"),
+                user['picture']
+            )
+
     return render_template(
         "home.html",
         session=session.get("user"),
@@ -92,6 +117,18 @@ def details(id):
             ...
 
 
+    myreview_db = db.execute("SELECT * FROM review review WHERE anime_id = ?", id)
+    reviews = list()
+    for review in myreview_db:
+        user = db.execute("SELECT _name, picture, posted_at from userdb where id = ?", review["sender_id"])
+
+        reviews.append({
+            "review": myreview_db["content"],
+            "sender": user["_name"],
+            "sender_picture": user["picture"],
+            "posted_at": myreview_db["posted_at"]
+        })
+
     # return anime
     return render_template(
         "details.html", 
@@ -100,8 +137,46 @@ def details(id):
         anime=anime_details
     )
 
-# /** TODO **/
+
 # SEND REVIEW
+@app.route("/send_review/<int:anime_id>", methods=["GET","POST"])
+def send_review(anime_id):
+
+    # if method not post
+    if not request.method == "POST":
+        flash("Please use correct method", "error")
+        return render_template("message.html")
+
+    review = request.form.get("review")
+    sender_id = db.execute("SELECT id FROM userdb WHERE _email = ?", session.get("user")["userinfo"]["email"])
+
+    # check in the db
+    reviewDB = db.execute(
+        "SELECT * FROM review WHERE sender_id = ? AND anime_id = ?", 
+        sender_id[0]['id'], 
+        anime_id
+    )
+
+    # check if user already left a review
+    if len(reviewDB) > 0:
+        flash("You left a comment already!")
+        return render_template("message.html")
+
+
+    db.execute(
+        "INSERT INTO review (sender_id, anime_id, content, posted_at) VALUES (?,?,?,?)", 
+        sender_id[0]['id'], 
+        anime_id, 
+        review,
+        datetime.now()
+    )
+
+    flash("Review added!", "success")
+    return render_template("message.html")
+
+
+
+# /** TODO **/
 # PROFILE
 
 
