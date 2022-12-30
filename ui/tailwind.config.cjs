@@ -5,7 +5,19 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      // spacing
+      spacing: {
+        '54': '215px',
+      },
+    },
+
+    // google font
+    fontFamily: {
+      'quicksand': 'Quicksand, sans-serif',
+    },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide'),
+  ],
 }
