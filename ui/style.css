@@ -7,11 +7,9 @@
 @keyframes square {
   from {
     left: -300px;
-    top: 0px;
   } 
   to {
     left: 0px;
-    top: 0px;
   }
 }
 
@@ -24,11 +22,40 @@
 @keyframes hide {
   from {
     left: 0px;
-    top: 0px;
   } 
   to {
     left: -300px;
+  }
+}
+
+
+/* show search bar */
+.show-sb {
+  animation-name: show;
+  animation-duration: .1s;
+}
+
+@keyframes show {
+  from {
+    top: -60px;
+  }
+  to {
     top: 0px;
   }
 }
 
+
+/* hide search bar */
+.slide-sb {
+  animation-name: slide;
+  animation-duration: .3s;
+}
+
+@keyframes slide {
+  from {
+    top: 0px;
+  }
+  to {
+    top: -60px;
+  }
+}

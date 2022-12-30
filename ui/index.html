@@ -84,7 +84,7 @@
       <section id="search-section" class="absolute hidden">
 
         <div class="w-screen h-screen fixed bottom-0 z-50 backdrop-blur-sm p-4">
-          <div class="border rounded-lg px-1 py-2 bg-zinc-50 grid grid-cols-12 content-center items-center">
+          <div id="search-bar" class="relative border top-[-60px] rounded-lg px-1 py-2 bg-zinc-50 grid grid-cols-12 content-center items-center">
 
             <div class="flex justify-center items-center text-zinc-600">
               <span class="material-symbols-rounded">
@@ -92,10 +92,10 @@
               </span>
             </div>
 
-            <input type="text" placeholder="Search" class="bg-zinc-50 w-full col-span-10 outline-none">
+            <input type="text" placeholder="Search" name="search" id="search" autocomplete="off" class="py-1 bg-zinc-50 w-full outline-none col-span-10">
             
             <div class="flex justify-center items-center text-zinc-600">
-              <button class="material-symbols-rounded rounded-full hover:bg-zinc-300">
+              <button id="close-search" class="material-symbols-rounded rounded-full hover:bg-zinc-300">
                 close
               </button>
             </div>
@@ -176,33 +176,11 @@
             </div>
 
 
-            <div class="grid grid-rows-2 gap-y-4 grid-flow-col overflow-x-scroll scroll-smooth snap-x snap-mandatory w- scrollbar-hide">
+            <div class="grid grid-rows-2 grid-flow-col overflow-x-scroll scroll-smooth snap-x snap-mandatory w- scrollbar-hide">
 
               <!-- one item -->
-                <button class="snap-start p-1.5 w-[93vw] group gap-2  hover:bg-zinc-200 rounded-lg grid grid-cols-4">
-                  <div style="background-image: url(https://images.unsplash.com/photo-1541562232579-512a21360020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);"
-                  class="w-24 h-24 px-4 bg-contain bg-no-repeat bg-center rounded-md overflow-hidden border border-zinc-300 bg-zinc-50">
-                    <!-- <img class="w-full h-full"
-                    src="https://images.unsplash.com/photo-1541562232579-512a21360020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt=""> -->
-                  </div> 
-                  <div class="col-span-3 flex flex-col items-start gap-2 text-sm">
-                    <h5 class="font-medium">Cowboy Bebop: Knockin' on Heaven's Door"</h5>
-                    <p class="text-gray-400">カウボーイビバップ天国の扉</p>
-                    <!-- <p class="text-xs text-gray-400">September, 2001</p> -->
-                    <a class="group-hover:bg-white border border-zinc-300 bg-zinc-200 uppercase text-xs font-extrabold px-2 py-1 rounded-lg flex gap-2"
-                    href="">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
-                      <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm14.024-.983a1.125 1.125 0 010 1.966l-5.603 3.113A1.125 1.125 0 019 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113z" clip-rule="evenodd" />
-                    </svg>
-                    <p>trailer</p>
-                  </a>
-                  </div>
-                </button>
-              <!-- end -->
-
-              <!-- one item -->
-              <button class="snap-start p-1.5 w-[93vw] group gap-2  hover:bg-zinc-200 rounded-lg grid grid-cols-4">
-                <div class="w-24 h-24 rounded-md overflow-hidden shadow-md">
+              <button class="snap-start p-4 w-[93vw] group gap-2  hover:bg-zinc-200 rounded-lg grid grid-cols-4">
+                <div class="w-24 h-32 rounded-md overflow-hidden shadow-md">
                   <img class="w-full h-full"
                   src="https://images.unsplash.com/photo-1541562232579-512a21360020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
                 </div>
@@ -222,8 +200,8 @@
             <!-- end -->
 
             <!-- one item -->
-            <button class="snap-start p-1.5 w-[93vw] group gap-2  hover:bg-zinc-200 rounded-lg grid grid-cols-4">
-              <div class="w-24 h-24 rounded-md overflow-hidden shadow-md">
+            <button class="snap-start p-4 w-[93vw] group gap-2  hover:bg-zinc-200 rounded-lg grid grid-cols-4">
+              <div class="w-24 h-32 rounded-md overflow-hidden shadow-md">
                 <img class="w-full h-full"
                 src="https://images.unsplash.com/photo-1541562232579-512a21360020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
               </div>
@@ -243,8 +221,8 @@
           <!-- end -->
 
           <!-- one item -->
-          <button class="snap-start p-1.5 w-[93vw] group gap-2  hover:bg-zinc-200 rounded-lg grid grid-cols-4">
-            <div class="w-24 h-24 rounded-md overflow-hidden shadow-md">
+          <button class="snap-start p-4 w-[93vw] group gap-2  hover:bg-zinc-200 rounded-lg grid grid-cols-4">
+            <div class="w-24 h-32 rounded-md overflow-hidden shadow-md">
               <img class="w-full h-full"
               src="https://images.unsplash.com/photo-1541562232579-512a21360020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
             </div>
@@ -264,8 +242,8 @@
         <!-- end -->
 
         <!-- one item -->
-        <button class="snap-start p-1.5 w-[93vw] group gap-2  hover:bg-zinc-200 rounded-lg grid grid-cols-4">
-          <div class="w-24 h-24 rounded-md overflow-hidden shadow-md">
+        <button class="snap-start p-4 w-[93vw] group gap-2  hover:bg-zinc-200 rounded-lg grid grid-cols-4">
+          <div class="w-24 h-32 rounded-md overflow-hidden shadow-md">
             <img class="w-full h-full"
             src="https://images.unsplash.com/photo-1541562232579-512a21360020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
           </div>
@@ -285,8 +263,8 @@
       <!-- end -->
 
       <!-- one item -->
-      <button class="snap-start p-1.5 w-[93vw] group gap-2  hover:bg-zinc-200 rounded-lg grid grid-cols-4">
-        <div class="w-24 h-24 rounded-md overflow-hidden shadow-md">
+      <button class="snap-start p-4 w-[93vw] group gap-2  hover:bg-zinc-200 rounded-lg grid grid-cols-4">
+        <div class="w-24 h-32 rounded-md overflow-hidden shadow-md">
           <img class="w-full h-full"
           src="https://images.unsplash.com/photo-1541562232579-512a21360020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
         </div>
@@ -306,8 +284,8 @@
     <!-- end -->
 
     <!-- one item -->
-    <button class="snap-start p-1.5 w-[93vw] group gap-2  hover:bg-zinc-200 rounded-lg grid grid-cols-4">
-      <div class="w-24 h-24 rounded-md overflow-hidden shadow-md">
+    <button class="snap-start p-4 w-[93vw] group gap-2  hover:bg-zinc-200 rounded-lg grid grid-cols-4">
+      <div class="w-24 h-32 rounded-md overflow-hidden shadow-md">
         <img class="w-full h-full"
         src="https://images.unsplash.com/photo-1541562232579-512a21360020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
       </div>
@@ -327,8 +305,8 @@
   <!-- end -->
 
   <!-- one item -->
-  <button class="snap-start p-1.5 w-[93vw] group gap-2  hover:bg-zinc-200 rounded-lg grid grid-cols-4">
-    <div class="w-24 h-24 rounded-md overflow-hidden shadow-md">
+  <button class="snap-start p-4 w-[93vw] group gap-2  hover:bg-zinc-200 rounded-lg grid grid-cols-4">
+    <div class="w-24 h-32 rounded-md overflow-hidden shadow-md">
       <img class="w-full h-full"
       src="https://images.unsplash.com/photo-1541562232579-512a21360020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
     </div>
