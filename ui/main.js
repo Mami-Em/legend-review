@@ -28,21 +28,33 @@
 const menu = document.querySelector("#menu");
 const menuSection=document.querySelector("#menu-section");
 document.querySelector("#menu-btn").addEventListener("click", function() {
+
   // show menu section
   menuSection.classList.remove("hidden");
-  menu.classList.remove("close-menu");
+  
+  // rm hide menu anim
+  if (menu.classList.contains("hide-menu")) {
+    menu.classList.remove("hide-menu");
+  };
+
+  // slide menu in after .05s
   setTimeout(() => {
     menu.classList.add("show-menu");
-  }, 300);
-
+    menu.classList.remove("left-[-300px]");
+  }, 50);
 });
 
-// close menu btn
-document.querySelector("#close-menu-btn").addEventListener("click", function() {
+// hide menu btn
+document.querySelector("#hide-menu-btn").addEventListener("click", function() {
 
+  // rm show menu anim
   menu.classList.remove("show-menu");
-  menu.classList.add("close-menu");
 
+  // slide out menu
+  menu.classList.add("hide-menu");
+  menu.classList.add("left-[-300px]");
+
+  // rm blur bg after .2s
   setTimeout(() => {
     menuSection.classList.add("hidden");
   },200);

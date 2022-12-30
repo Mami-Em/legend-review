@@ -1,12 +1,12 @@
+/* slide menu in */
 .show-menu {
-  position: relative;
-  /* left: -400px; */
-  animation-name: show 1s;
+  animation-name: square;
+  animation-duration: .1s;
 }
 
-@keyframes show {
+@keyframes square {
   from {
-    left: -400px;
+    left: -300px;
     top: 0px;
   } 
   to {
@@ -15,11 +15,11 @@
   }
 }
 
-
-.close-menu {
-  animation: hide .3s;
+/* slide menu out */
+.hide-menu {
+  animation-name: hide;
+  animation-duration: .3s;
 }
-
 
 @keyframes hide {
   from {
@@ -27,7 +27,8 @@
     top: 0px;
   } 
   to {
-    left: -400px;
+    left: -300px;
     top: 0px;
   }
 }
+
