@@ -1,9 +1,13 @@
-<p>Found {{ show | length }}</p>
-
 {% for item in show %}
-<li>
-    <a id="{{ item['kitsu_id'] }}" href="/details/{{ item['kitsu_id'] }}">
-        {{ item['en_title'] }}
-    </a>
-</li>
+<div class="flex flex-col gap-2 rounded-lg p-2">
+    
+    <button class="hover:scale-[1.03] hover:transition hover:duration-300 rounded-lg border h-32 bg-cover" style="background-image: url(./nezuko.jpg);">
+    </button>
+    
+    <div class="text-xs font-bold">
+        <p class="truncate">{{ item['en_title'] }}</p>
+        <p class="text-zinc-400">230 likes</p>
+    </div>
+    
+</div>
 {% endfor %}

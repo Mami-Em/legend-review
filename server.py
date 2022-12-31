@@ -70,20 +70,17 @@ def search():
     query = request.args.get("q")
 
     # listen to the user input
-    if len(query) >= 3:
-        show = db.execute(
-            "SELECT * FROM anime WHERE LOWER(en_title) LIKE ?",
-            "%" + query.lower() + "%"
-        )
+    show = db.execute(
+        "SELECT * FROM anime WHERE LOWER(en_title) LIKE ?",
+        "%" + query.lower() + "%"
+    )
 
-        # return any data from the db that match the user input
-        if len(show) > 0:
-            return render_template("search.html", show=show)
+    # return any data from the db that match the user input
+    if len(show) > 0:
+        return render_template("search.html", show=show)
 
-        return "No data found"
+    return "No data found"
 
-    # if input less than 3 char
-    return ""
 
 
 # ANIME DETAILS

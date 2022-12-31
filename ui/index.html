@@ -20,7 +20,7 @@
 
       <section id="menu-section" class="absolute hidden">
       <div class="w-screen h-screen fixed z-50 backdrop-blur-sm">
-        <div id="menu" class="border-r rounded-r-xl w-3/5 h-full shadow-xl bg-zinc-50 overflow-hidden absolute left-[-300px]">
+        <div id="menu" class="border-r rounded-r-xl max-w-xs w-3/5 h-full shadow-xl bg-zinc-50 overflow-hidden absolute left-[-300px]">
 
           <!-- section 1 -->
           <div class="flex justify-between items-center px-6 py-4">
@@ -45,7 +45,7 @@
               <a href="" class="group">
                 <div class="rounded-lg p-2 px-4 grid grid-cols-5 items-center group-hover:bg-zinc-100">
                   
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-8 h-8 group-hover:scale-105 transition duration-100 ease-in-out">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-8 h-8 group-hover:scale-[1.03] transition duration-100 ease-in-out">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
                   </svg>                  
                   
@@ -56,7 +56,7 @@
               
               <a href="" class="group">
                 <div class="rounded-lg p-2 px-4 grid grid-cols-5 items-center group-hover:bg-zinc-100">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-8 h-8 group-hover:scale-105 transition duration-100 ease-in-out">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-8 h-8 group-hover:scale-[1.03] transition duration-100 ease-in-out">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                   </svg>
                   
@@ -68,7 +68,7 @@
 
               <a href="" class="group">
                 <div class="rounded-lg p-2 px-4 grid grid-cols-5 items-center group-hover:bg-zinc-100">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-8 h-8 group-hover:scale-105 transition duration-100 ease-in-out">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-8 h-8 group-hover:scale-[1.03] transition duration-100 ease-in-out">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                   </svg>
                   
@@ -88,7 +88,7 @@
       <section id="search-section" class="absolute hidden">
 
         <div class="w-screen h-screen fixed bottom-0 z-50 backdrop-blur-sm p-4">
-          <div id="search-bar" class="relative border top-[-60px] rounded-lg px-1 py-2 bg-zinc-50 grid grid-cols-12 content-center items-center">
+          <div id="search-bar" class="relative border max-w-md mx-auto top-[-60px] rounded-lg px-1 py-2 bg-zinc-50 grid grid-cols-12 content-center items-center">
 
             <div class="flex justify-center items-center text-zinc-600">
               <span class="material-symbols-rounded">
@@ -108,9 +108,164 @@
 
       </section>
 
+      <section id="search-section" class="absolute ">
+
+        <div class="w-screen h-screen fixed bottom-0 z-50 backdrop-blur-sm p-4">
+          <div id="search-bar" class="relative border max-w-md mx-auto  rounded-lg px-1 py-2 bg-zinc-50 grid grid-cols-12 content-center items-center">
+
+            <div class="flex justify-center items-center text-zinc-600">
+              <span class="material-symbols-rounded">
+                search
+              </span>
+            </div>
+
+            <input type="text" placeholder="Search" name="search" id="search" autocomplete="off" class="py-1 bg-zinc-50 w-full outline-none col-span-10">
+            
+            <div class="flex justify-center items-center text-zinc-600">
+              <button id="close-search" class="material-symbols-rounded rounded-full hover:bg-zinc-300">
+                close
+              </button>
+            </div>
+          </div>
+
+          <div id="result-section" class="py-4 max-w-md mx-auto hidden">
+
+            <div class="max-h-96 rounded-t-lg bg-zinc-50 overflow-y-scroll scroll-smooth scrollbar-hide relative border p-2 grid grid-cols-3">
+              
+              <div class="flex flex-col gap-2 rounded-lg p-2">
+
+                <button class="hover:scale-[1.03] hover:transition hover:duration-300 rounded-lg border h-32 bg-cover" style="background-image: url(./nezuko.jpg);">
+                </button>
+
+                <div class="text-xs font-bold">
+                  <p>Cowboy bobep: one draem word</p>
+                  <p class="text-zinc-400">230 likes</p>
+                </div>
+
+              </div>
+
+              <div class="flex flex-col gap-2 rounded-lg p-2">
+
+                <button class="hover:scale-[1.03] hover:transition hover:duration-300 rounded-lg border h-32 bg-cover" style="background-image: url(./nezuko.jpg);">
+                </button>
+
+                <div class="text-xs font-bold">
+                  <p>Cowboy bobep: one draem word</p>
+                  <p class="text-zinc-400">230 likes</p>
+                </div>
+
+              </div>
+
+              <div class="flex flex-col gap-2 rounded-lg p-2">
+
+                <button class="hover:scale-[1.03] hover:transition hover:duration-300 rounded-lg border h-32 bg-cover" style="background-image: url(./nezuko.jpg);">
+                </button>
+
+                <div class="text-xs font-bold">
+                  <p>Cowboy bobep: one draem word</p>
+                  <p class="text-zinc-400">230 likes</p>
+                </div>
+
+              </div>
+
+              <div class="flex flex-col gap-2 rounded-lg p-2">
+
+                <button class="hover:scale-[1.03] hover:transition hover:duration-300 rounded-lg border h-32 bg-cover" style="background-image: url(./nezuko.jpg);">
+                </button>
+
+                <div class="text-xs font-bold">
+                  <p>Cowboy bobep: one draem word</p>
+                  <p class="text-zinc-400">230 likes</p>
+                </div>
+
+              </div>
+
+              <div class="flex flex-col gap-2 rounded-lg p-2">
+
+                <button class="hover:scale-[1.03] hover:transition hover:duration-300 rounded-lg border h-32 bg-cover" style="background-image: url(./nezuko.jpg);">
+                </button>
+
+                <div class="text-xs font-bold">
+                  <p>Cowboy bobep: one draem word</p>
+                  <p class="text-zinc-400">230 likes</p>
+                </div>
+
+              </div>
+
+              <div class="flex flex-col gap-2 rounded-lg p-2">
+
+                <button class="hover:scale-[1.03] hover:transition hover:duration-300 rounded-lg border h-32 bg-cover" style="background-image: url(./nezuko.jpg);">
+                </button>
+
+                <div class="text-xs font-bold">
+                  <p>Cowboy bobep: one draem word</p>
+                  <p class="text-zinc-400">230 likes</p>
+                </div>
+
+              </div>
+
+              <div class="flex flex-col gap-2 rounded-lg p-2">
+
+                <button class="hover:scale-[1.03] hover:transition hover:duration-300 rounded-lg border h-32 bg-cover" style="background-image: url(./nezuko.jpg);">
+                </button>
+
+                <div class="text-xs font-bold">
+                  <p>Cowboy bobep: one draem word</p>
+                  <p class="text-zinc-400">230 likes</p>
+                </div>
+
+              </div>
+
+              <div class="flex flex-col gap-2 rounded-lg p-2">
+
+                <button class="hover:scale-[1.03] hover:transition hover:duration-300 rounded-lg border h-32 bg-cover" style="background-image: url(./nezuko.jpg);">
+                </button>
+
+                <div class="text-xs font-bold">
+                  <p>Cowboy bobep: one draem word</p>
+                  <p class="text-zinc-400">230 likes</p>
+                </div>
+
+              </div>
+
+              <div class="flex flex-col gap-2 rounded-lg p-2">
+
+                <button class="hover:scale-[1.03] hover:transition hover:duration-300 rounded-lg border h-32 bg-cover" style="background-image: url(./nezuko.jpg);">
+                </button>
+
+                <div class="text-xs font-bold">
+                  <p>Cowboy bobep: one draem word</p>
+                  <p class="text-zinc-400">230 likes</p>
+                </div>
+
+              </div>
+
+              <div class="flex flex-col gap-2 rounded-lg p-2">
+
+                <button class="hover:scale-[1.03] hover:transition hover:duration-300 rounded-lg border h-32 bg-cover" style="background-image: url(./nezuko.jpg);">
+                </button>
+
+                <div class="text-xs font-bold">
+                  <p>Cowboy bobep: one draem word</p>
+                  <p class="text-zinc-400">230 likes</p>
+                </div>
+
+              </div>
+
+              
+            
+            </div>
+            <div class="border-x border-b bg-zinc-100 py-2 px-4 text-xs font-bold rounded-b-lg text-zinc-400 w-full">
+              Result (23)
+            </div>
+
+          </div>
+        </div>
+
+      </section>
       
       <header class="flex justify-between items-center px-4 sticky top-0 shadow-md bg-zinc-50">
-        <button id="menu-btn" class="material-symbols-rounded rounded-full w-10 h-10 hover:bg-zinc-200">
+        <button id="menu-btn" class="material-symbols-rounded rounded-full w-10 h-10 flex justify-center items-center hover:bg-zinc-200">
           menu
         </button>
 
@@ -129,7 +284,7 @@
         </div>
       </header>
 
-      <main>
+      <main class="max-w-xl mx-auto">
         <section id="first-section" class="p-4">
           <div class="flex flex-col gap-2">
             <div class="p-2.5">
@@ -140,32 +295,57 @@
             <!-- anime lists -->
             <div class="flex snap-x snap-mandatory overflow-x-scroll scroll-smooth scrollbar-hide">
 
-              <button class="snap-start w-40 h-70 p-1.5  hover:bg-zinc-200 flex items-center justify-center rounded-lg">
-                <!-- one -->
-                <div class="flex flex-col justify-between h-full">
-                  <div class="h-54 w-36 rounded-md overflow-hidden shadow-md mb-2">
-                    <img class="w-full h-full"
-                    src="https://images.unsplash.com/photo-1541562232579-512a21360020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
-                  </div>
-                  <div class="text-sm font-medium">
-                    <p class="truncate w-36">Naruto: Road to zion amkfnakasfda</p>
-                    <div class="flex gap-4 text-gray-400 w-36 truncate">
-                      <div class="flex gap-1 items-center">
-                        <p class="tracking-widest">9.4</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3">
-                          <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
-                        </svg>  
-                      </div>
-                      <p class="">
-                        ナルト
-                      </p>
-                    </div>
-                  </div>
-                </div>
-  
-                <!-- endone -->
-              </button>
+              <!-- animme -->
+              <button class="snap-start rounded-lg p-2.5 w-[156px] hover:bg-zinc-100">
 
+                <div class="rounded-lg h-48 w-full shadow-md bg-cover" style="background-image: url(./nezuko.jpg)"></div>
+                <div class="flex flex-col text-xs font-semibold pt-2">
+                  <p class="text-start truncate">Cowboy bebop: knocking'on heaven's door</p>
+                  <p class="text-start text-zinc-400">Japanese version title</p>
+                </div>
+
+              </button>
+              <!-- endanime -->
+
+              <!-- animme -->
+              <button class="snap-start rounded-lg p-2.5 w-[156px] hover:bg-zinc-100">
+
+                <div class="rounded-lg h-48 w-full shadow-md bg-cover" style="background-image: url(./nezuko.jpg)"></div>
+                <div class="flex flex-col text-xs font-semibold pt-2">
+                  <p class="text-start truncate">Cowboy bebop: knocking'on heaven's door</p>
+                  <p class="text-start text-zinc-400">Japanese version title</p>
+                </div>
+
+              </button>
+              <!-- endanime -->
+
+              <!-- animme -->
+              <button class="snap-start rounded-lg p-2.5 w-[156px] hover:bg-zinc-100">
+
+                <div class="rounded-lg h-48 w-full shadow-md bg-cover" style="background-image: url(./nezuko.jpg)"></div>
+                <div class="flex flex-col text-xs font-semibold pt-2">
+                  <p class="text-start truncate">Cowboy bebop: knocking'on heaven's door</p>
+                  <p class="text-start text-zinc-400">Japanese version title</p>
+                </div>
+
+              </button>
+              <!-- endanime -->
+
+              <!-- animme -->
+              <button class="snap-start rounded-lg p-2.5 w-[156px] hover:bg-zinc-100">
+
+                <div class="rounded-lg h-48 w-full shadow-md bg-cover" style="background-image: url(./nezuko.jpg)"></div>
+                <div class="flex flex-col text-xs font-semibold pt-2">
+                  <p class="text-start truncate">Cowboy bebop: knocking'on heaven's door</p>
+                  <p class="text-start text-zinc-400">Japanese version title</p>
+                </div>
+
+              </button>
+              <!-- endanime -->
+              
+
+
+             
               <!-- more anime -->
 
             </div>
@@ -180,154 +360,104 @@
             </div>
 
 
-            <div class="grid grid-rows-2 grid-flow-col overflow-x-scroll scroll-smooth snap-x snap-mandatory w- scrollbar-hide">
+            <div class="grid grid-rows-2 grid-flow-col overflow-x-scroll scroll-smooth snap-x snap-mandatory scrollbar-hide">
 
-              <!-- one item -->
-              <button class="snap-start p-4 w-[93vw] group gap-2  hover:bg-zinc-200 rounded-lg grid grid-cols-4">
-                <div class="w-24 h-32 rounded-md overflow-hidden shadow-md">
-                  <img class="w-full h-full"
-                  src="https://images.unsplash.com/photo-1541562232579-512a21360020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
+              <!-- w-[93vw] -->
+              <!-- item -->
+              <button class="p-2.5 w-[93.5vw] text-start hover:bg-zinc-100 rounded-lg snap-start">
+
+                <div class="rounded-lg h-28 flex gap-4 text-xs font-semibold">
+                  <div class="bg-cover w-20 h-full rounded-lg shadow-md" style="background-image: url(./nezuko.jpg);"></div>
+                  <div class="flex flex-col gap-2 justify-center">
+                    <div>
+                      <p>Cowboy bebop: knocking on heaven's door</p>
+                      <p class="text-zinc-400">date</p>
+                    </div>
+                    
+                    <a href="" class="flex gap-2 border border-zinc-900 w-fit py-1 pl-2 pr-4 rounded-lg items-center text-sm group hover:text-zinc-50 hover:bg-zinc-900" target="_blank" rel="noopener noreferrer">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 rounded-full fill-zinc-900 group-hover:fill-zinc-50 flex p-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+                      </svg>
+                      trailer
+                    </a>
+
+                  </div>
                 </div>
-                <div class="col-span-3 flex flex-col items-start gap-2 text-sm">
-                  <h5 class="font-medium">Cowboy Bebop: Knockin' on Heaven's Door"</h5>
-                  <p class="text-gray-400">カウボーイビバップ天国の扉</p>
-                  <!-- <p class="text-xs text-gray-400">September, 2001</p> -->
-                  <a class="group-hover:bg-white border border-zinc-300 bg-zinc-200 uppercase text-xs font-extrabold px-2 py-1 rounded-lg flex gap-2"
-                  href="">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
-                    <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm14.024-.983a1.125 1.125 0 010 1.966l-5.603 3.113A1.125 1.125 0 019 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113z" clip-rule="evenodd" />
-                  </svg>
-                  <p>trailer</p>
-                </a>
-                </div>
+
               </button>
-            <!-- end -->
+              <!-- end item -->
 
-            <!-- one item -->
-            <button class="snap-start p-4 w-[93vw] group gap-2  hover:bg-zinc-200 rounded-lg grid grid-cols-4">
-              <div class="w-24 h-32 rounded-md overflow-hidden shadow-md">
-                <img class="w-full h-full"
-                src="https://images.unsplash.com/photo-1541562232579-512a21360020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
-              </div>
-              <div class="col-span-3 flex flex-col items-start gap-2 text-sm">
-                <h5 class="font-medium">Cowboy Bebop: Knockin' on Heaven's Door"</h5>
-                <p class="text-gray-400">カウボーイビバップ天国の扉</p>
-                <!-- <p class="text-xs text-gray-400">September, 2001</p> -->
-                <a class="group-hover:bg-white border border-zinc-300 bg-zinc-200 uppercase text-xs font-extrabold px-2 py-1 rounded-lg flex gap-2"
-                href="">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
-                  <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm14.024-.983a1.125 1.125 0 010 1.966l-5.603 3.113A1.125 1.125 0 019 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113z" clip-rule="evenodd" />
-                </svg>
-                <p>trailer</p>
-              </a>
-              </div>
-            </button>
-          <!-- end -->
+              <!-- item -->
+              <button class="p-2.5 w-[93.5vw] text-start hover:bg-zinc-100 rounded-lg snap-start">
 
-          <!-- one item -->
-          <button class="snap-start p-4 w-[93vw] group gap-2  hover:bg-zinc-200 rounded-lg grid grid-cols-4">
-            <div class="w-24 h-32 rounded-md overflow-hidden shadow-md">
-              <img class="w-full h-full"
-              src="https://images.unsplash.com/photo-1541562232579-512a21360020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
-            </div>
-            <div class="col-span-3 flex flex-col items-start gap-2 text-sm">
-              <h5 class="font-medium">Cowboy Bebop: Knockin' on Heaven's Door"</h5>
-              <p class="text-gray-400">カウボーイビバップ天国の扉</p>
-              <!-- <p class="text-xs text-gray-400">September, 2001</p> -->
-              <a class="group-hover:bg-white border border-zinc-300 bg-zinc-200 uppercase text-xs font-extrabold px-2 py-1 rounded-lg flex gap-2"
-              href="">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
-                <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm14.024-.983a1.125 1.125 0 010 1.966l-5.603 3.113A1.125 1.125 0 019 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113z" clip-rule="evenodd" />
-              </svg>
-              <p>trailer</p>
-            </a>
-            </div>
-          </button>
-        <!-- end -->
+                <div class="rounded-lg h-28 flex gap-4 text-xs font-semibold">
+                  <div class="bg-cover w-20 h-full rounded-lg shadow-md" style="background-image: url(./nezuko.jpg);"></div>
+                  <div class="flex flex-col gap-2 justify-center">
+                    <div>
+                      <p>Cowboy bebop: knocking on heaven's door</p>
+                      <p class="text-zinc-400">date</p>
+                    </div>
+                    
+                    <a href="" class="flex gap-2 border border-zinc-900 w-fit py-1 pl-2 pr-4 rounded-lg items-center text-sm group hover:text-zinc-50 hover:bg-zinc-900" target="_blank" rel="noopener noreferrer">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 rounded-full fill-zinc-900 group-hover:fill-zinc-50 flex p-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+                      </svg>
+                      trailer
+                    </a>
 
-        <!-- one item -->
-        <button class="snap-start p-4 w-[93vw] group gap-2  hover:bg-zinc-200 rounded-lg grid grid-cols-4">
-          <div class="w-24 h-32 rounded-md overflow-hidden shadow-md">
-            <img class="w-full h-full"
-            src="https://images.unsplash.com/photo-1541562232579-512a21360020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
-          </div>
-          <div class="col-span-3 flex flex-col items-start gap-2 text-sm">
-            <h5 class="font-medium">Cowboy Bebop: Knockin' on Heaven's Door"</h5>
-            <p class="text-gray-400">カウボーイビバップ天国の扉</p>
-            <!-- <p class="text-xs text-gray-400">September, 2001</p> -->
-            <a class="group-hover:bg-white border border-zinc-300 bg-zinc-200 uppercase text-xs font-extrabold px-2 py-1 rounded-lg flex gap-2"
-            href="">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
-              <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm14.024-.983a1.125 1.125 0 010 1.966l-5.603 3.113A1.125 1.125 0 019 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113z" clip-rule="evenodd" />
-            </svg>
-            <p>trailer</p>
-          </a>
-          </div>
-        </button>
-      <!-- end -->
+                  </div>
+                </div>
 
-      <!-- one item -->
-      <button class="snap-start p-4 w-[93vw] group gap-2  hover:bg-zinc-200 rounded-lg grid grid-cols-4">
-        <div class="w-24 h-32 rounded-md overflow-hidden shadow-md">
-          <img class="w-full h-full"
-          src="https://images.unsplash.com/photo-1541562232579-512a21360020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
-        </div>
-        <div class="col-span-3 flex flex-col items-start gap-2 text-sm">
-          <h5 class="font-medium">Cowboy Bebop: Knockin' on Heaven's Door"</h5>
-          <p class="text-gray-400">カウボーイビバップ天国の扉</p>
-          <!-- <p class="text-xs text-gray-400">September, 2001</p> -->
-          <a class="group-hover:bg-white border border-zinc-300 bg-zinc-200 uppercase text-xs font-extrabold px-2 py-1 rounded-lg flex gap-2"
-          href="">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
-            <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm14.024-.983a1.125 1.125 0 010 1.966l-5.603 3.113A1.125 1.125 0 019 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113z" clip-rule="evenodd" />
-          </svg>
-          <p>trailer</p>
-        </a>
-        </div>
-      </button>
-    <!-- end -->
+              </button>
+              <!-- end item -->
 
-    <!-- one item -->
-    <button class="snap-start p-4 w-[93vw] group gap-2  hover:bg-zinc-200 rounded-lg grid grid-cols-4">
-      <div class="w-24 h-32 rounded-md overflow-hidden shadow-md">
-        <img class="w-full h-full"
-        src="https://images.unsplash.com/photo-1541562232579-512a21360020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
-      </div>
-      <div class="col-span-3 flex flex-col items-start gap-2 text-sm">
-        <h5 class="font-medium">Cowboy Bebop: Knockin' on Heaven's Door"</h5>
-        <p class="text-gray-400">カウボーイビバップ天国の扉</p>
-        <!-- <p class="text-xs text-gray-400">September, 2001</p> -->
-        <a class="group-hover:bg-white border border-zinc-300 bg-zinc-200 uppercase text-xs font-extrabold px-2 py-1 rounded-lg flex gap-2"
-        href="">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
-          <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm14.024-.983a1.125 1.125 0 010 1.966l-5.603 3.113A1.125 1.125 0 019 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113z" clip-rule="evenodd" />
-        </svg>
-        <p>trailer</p>
-      </a>
-      </div>
-    </button>
-  <!-- end -->
+              <!-- item -->
+              <button class="p-2.5 w-[93.5vw] text-start hover:bg-zinc-100 rounded-lg snap-start">
 
-  <!-- one item -->
-  <button class="snap-start p-4 w-[93vw] group gap-2  hover:bg-zinc-200 rounded-lg grid grid-cols-4">
-    <div class="w-24 h-32 rounded-md overflow-hidden shadow-md">
-      <img class="w-full h-full"
-      src="https://images.unsplash.com/photo-1541562232579-512a21360020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
-    </div>
-    <div class="col-span-3 flex flex-col items-start gap-2 text-sm">
-      <h5 class="font-medium">Cowboy Bebop: Knockin' on Heaven's Door"</h5>
-      <p class="text-gray-400">カウボーイビバップ天国の扉</p>
-      <!-- <p class="text-xs text-gray-400">September, 2001</p> -->
-      <a class="group-hover:bg-white border border-zinc-300 bg-zinc-200 uppercase text-xs font-extrabold px-2 py-1 rounded-lg flex gap-2"
-      href="">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
-        <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm14.024-.983a1.125 1.125 0 010 1.966l-5.603 3.113A1.125 1.125 0 019 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113z" clip-rule="evenodd" />
-      </svg>
-      <p>trailer</p>
-    </a>
-    </div>
-  </button>
-<!-- end -->
+                <div class="rounded-lg h-28 flex gap-4 text-xs font-semibold">
+                  <div class="bg-cover w-20 h-full rounded-lg shadow-md" style="background-image: url(./nezuko.jpg);"></div>
+                  <div class="flex flex-col gap-2 justify-center">
+                    <div>
+                      <p>Cowboy bebop: knocking on heaven's door</p>
+                      <p class="text-zinc-400">date</p>
+                    </div>
+                    
+                    <a href="" class="flex gap-2 border border-zinc-900 w-fit py-1 pl-2 pr-4 rounded-lg items-center text-sm group hover:text-zinc-50 hover:bg-zinc-900" target="_blank" rel="noopener noreferrer">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 rounded-full fill-zinc-900 group-hover:fill-zinc-50 flex p-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+                      </svg>
+                      trailer
+                    </a>
+
+                  </div>
+                </div>
+
+              </button>
+              <!-- end item -->
+
+              <!-- item -->
+              <button class="p-2.5 w-[93.5vw] text-start hover:bg-zinc-100 rounded-lg snap-start">
+
+                <div class="rounded-lg h-28 flex gap-4 text-xs font-semibold">
+                  <div class="bg-cover w-20 h-full rounded-lg shadow-md" style="background-image: url(./nezuko.jpg);"></div>
+                  <div class="flex flex-col gap-2 justify-center">
+                    <div>
+                      <p>Cowboy bebop: knocking on heaven's door</p>
+                      <p class="text-zinc-400">date</p>
+                    </div>
+                    
+                    <a href="" class="flex gap-2 border border-zinc-900 w-fit py-1 pl-2 pr-4 rounded-lg items-center text-sm group hover:text-zinc-50 hover:bg-zinc-900" target="_blank" rel="noopener noreferrer">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 rounded-full fill-zinc-900 group-hover:fill-zinc-50 flex p-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+                      </svg>
+                      trailer
+                    </a>
+
+                  </div>
+                </div>
+
+              </button>
+              <!-- end item -->
               
             </div>
 
@@ -338,7 +468,24 @@
 
       <footer>
         <div class="border-t p-4">
+          <div class="font-semibold p-2.5">
+            Explore a collection of anime and share your thoughts among other anime fans.
+          </div>
 
+          
+
+          <div class="m-2.5 pb-4 text-sm text-zinc-400 grid grid-cols-2 gap-2 border-b">
+            <a href="http://" target="_blank" rel="noopener noreferrer">Recipe</a>
+            <a href="http://" target="_blank" rel="noopener noreferrer">Developer</a>
+            <a href="http://" target="_blank" rel="noopener noreferrer">Privacy policy</a>
+            <a href="http://" target="_blank" rel="noopener noreferrer">Terms and conditions</a>
+            <a href="http://" target="_blank" rel="noopener noreferrer">Github</a>
+            <a href="http://" target="_blank" rel="noopener noreferrer">Feedback</a>
+          </div>
+
+          <div class="text-xs text-zinc-400 p-2.5">
+            <p>© 2022 Anime review by <span class="font-semibold">Mami</span></p>
+          </div>
         </div>
       </footer>
 

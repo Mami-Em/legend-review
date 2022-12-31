@@ -1,8 +1,13 @@
 const search = document.querySelector("#search");
+const resultSection = document.querySelector("#result-section");
 
 search.addEventListener("input", async function() {
     let response = await fetch('/search?q=' + search.value);
     let shows = await response.text();
+    resultSection.classList.remove("hidden");
+    if(!resultSection.classList.contains("hidden") && (shows.length < 20 || search.value == "")) {
+        resultSection.classList.add("hidden");
+    }
     document.querySelector('#search-result').innerHTML = shows;
 });
 
@@ -28,7 +33,6 @@ document.querySelector("#hide-menu-btn").addEventListener("click", function() {
     setTimeout(() => {
         menuSection.classList.add("hidden");
     },200);
-
 });
 
 
@@ -56,4 +60,5 @@ document.querySelector("#close-search").addEventListener("click", function() {
     setTimeout(() => {
         searchSection.classList.add("hidden");
     }, 200);
+    resultSection.classList.add("hidden");
 });
