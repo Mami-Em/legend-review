@@ -1,7 +1,7 @@
 /* slide menu in */
 .show-menu {
   animation-name: square;
-  animation-duration: .1s;
+  animation-duration: .2s;
 }
 
 @keyframes square {
@@ -50,6 +50,7 @@
   animation-name: slide;
   animation-duration: .3s;
 }
+
 
 @keyframes slide {
   from {
