@@ -1,12 +1,12 @@
 {% for item in show %}
 <div class="flex flex-col gap-2 rounded-lg p-2">
     
-    <button class="hover:scale-[1.03] hover:transition hover:duration-300 rounded-lg border h-32 bg-cover" style="background-image: url(./nezuko.jpg);">
-    </button>
+    <a href="/details/{{ item['kitsu_id'] }}" class="hover:scale-[1.03] hover:transition hover:duration-300 rounded-lg border h-32 bg-cover" style="background-image: url({{ item['poster_image'] }});">
+    </a>
     
     <div class="text-xs font-bold">
         <p class="truncate">{{ item['en_title'] }}</p>
-        <p class="text-zinc-400">230 likes</p>
+        <!-- <p class="text-zinc-400">{{ item['favorite_count'] }} likes</p> -->
     </div>
     
 </div>

@@ -146,19 +146,28 @@
         </div>
     </header>
 
-    <ul id="search-result"></ul>
-
     {% block body %}{% endblock %}
 
-
     <footer>
-        2022 mami
+      <div class="border-t p-4">
+        <div class="font-semibold p-2.5">
+          Explore a collection of anime and share your thoughts among other anime fans.
+        </div>
+
+        
+
+        <div class="m-2.5 pb-4 text-sm text-zinc-400 grid grid-cols-2 gap-2 border-b">
+          <a href="http://" target="_blank" rel="noopener noreferrer">Github</a>
+          <a href="http://" target="_blank" rel="noopener noreferrer">Feedback</a>
+        </div>
+
+        <div class="text-xs text-zinc-400 p-2.5">
+          <p>© 2022 Anime review by <span class="font-semibold">Mami</span></p>
+        </div>
+      </div>
     </footer>
 
-
     {% block link %}{% endblock %}
-
-
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
     
 </body>

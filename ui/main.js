@@ -21,6 +21,9 @@
 
     * include
       -https://kitsu.io/api/edge/anime/id?include=reviews
+
+    * show only
+      -https://kitsu.io/api/edge/anime/
 */
 
 

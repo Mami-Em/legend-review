@@ -57,10 +57,21 @@ def home():
                 user['picture']
             )
 
+    trend = requests.get("https://kitsu.io/api/edge/trending/anime")
+    trending_api = trend.json()
+
+    popular = requests.get("https://kitsu.io/api/edge/anime?sort=-averageRating&page[limit]=20")
+    most_popular = popular.json()
+
+    upcom = requests.get("https://kitsu.io/api/edge/anime?sort=-startDate&page[limit]=20")
+    upcoming = upcom.json()
+
     return render_template(
         "home.html",
         session=session.get("user"),
-        pretty=json.dumps(session.get("user"), indent=4),
+        trending=trending_api,
+        popular=most_popular,
+        upcoming=upcoming
     )
 
 
@@ -74,6 +85,7 @@ def search():
         "SELECT * FROM anime WHERE LOWER(en_title) LIKE ?",
         "%" + query.lower() + "%"
     )
+
 
     # return any data from the db that match the user input
     if len(show) > 0:

@@ -62,3 +62,12 @@ document.querySelector("#close-search").addEventListener("click", function() {
     }, 200);
     resultSection.classList.add("hidden");
 });
+
+
+// redirect to anime details
+const anime_list = document.querySelectorAll(".anime");
+anime_list.forEach(element => {
+    element.addEventListener("click", () => {
+        location.href = `/details/${element.dataset.kitsu}`
+    });
+});
