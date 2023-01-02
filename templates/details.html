@@ -59,16 +59,16 @@
 </section>
 
 
-<main>
-    <section class="px-4 pt-8">
-        <div class="flex items-center gap-3 py-2 px-2.5">
-          <div class="shadow-lg rounded-lg w-24 h-32 bg-cover" style="background-image: url({{ anime['data']['attributes']['posterImage']['original'] }});">
+<main class="max-w-xl mx-auto lg:max-w-6xl">
+    <section class="px-4 pt-8 lg:pt-14">
+        <div class="flex items-center gap-3 py-2 px-2.5 lg:grid lg:grid-cols-6">
+          <div class="shadow-lg rounded-lg w-24 h-32 bg-cover lg:order-last lg:col-span-1 lg:w-full lg:h-54" style="background-image: url({{ anime['data']['attributes']['posterImage']['original'] }});">
           </div>
 
-          <div class="font-medium flex flex-col gap-3" style="width: 250px;">
-            <div>
-              <p class="text-2xl font-semibold">{{ details['english title'] }}</p> 
-              <p class="text-xs tracking-wider text-zinc-400">{{ details['launch date'] }}</p>
+          <div class="font-medium flex flex-col gap-3 lg:col-span-5 lg:order-1" style="width: 250px;">
+            <div class="lg:flex lg:flex-col lg:gap-3">
+              <p class="text-2xl font-semibold lg:text-6xl lg:text-zinc-800">{{ details['english title'] }}</p> 
+              <p class="text-xs tracking-wider text-zinc-400 lg:text-sm lg:p-1">{{ details['launch date'] }}</p>
             </div>
             <a href="https://www.youtube.com/embed/{{ anime['data']['attributes']['youtubeVideoId'] }}?enablejsapi=1&wmode=opaque&autoplay=1" 
                 class="flex gap-2 border border-zinc-900 w-fit py-1 pl-2 pr-4 rounded-lg items-center text-sm group hover:text-zinc-50 hover:bg-zinc-800 transition duration-300" target="_blank" rel="noopener noreferrer">
@@ -82,23 +82,14 @@
         </div>
     </section>
 
-    <section class="p-4">
+    <section class="py-4 pl-4 max-w-[50rem]">
 
-        <div class="px-2">
-          <div class="bg-zinc-100 rounded-lg p-4 flex flex-col">
-            <h2 class="text-xl font-semibold p-2">Details</h2>
-            <div class="grid grid-cols-2 gap-2 p-2">
-                {% for item in details %}
-                {% if not item == 'rating and review' %}
-                <p class="font-medium text-sm">{{ item | capitalize }}: <span class="text-zinc-400">{{ details[item] }}</span></p>
-                {% else %}
-                <p class="font-medium text-sm">{{ item | capitalize }}: <span class="text-zinc-400">{{ details[item]['total_votes'] }}</span></p>
-                {% endif %}
-                {% endfor %}
-            </div>
+        <div class="">
+          <div class="py-4 flex flex-col lg:gap-3">
+            <h2 class="text-xl font-semibold p-2">About this anime</h2>
 
             <div class="px-2">
-                <p class="font-medium text-sm">Description <span class="text-zinc-400">{{ anime['data']['attributes']['synopsis'] }}</span></p>
+                <p class="font-medium text-sm text-zinc-400 break-words">{{ anime['data']['attributes']['synopsis'] }}</p>
             </div>
           </div>
         </div>
@@ -133,7 +124,7 @@
 
         </div>
 
-        <ul class="flex flex-col gap-4 py-4">
+        <ul class="flex flex-col gap-4 py-4 lg:max-w-3xl">
 
             {% for review in db_reviews %}
             <li class="flex flex-col gap-2 p-2">

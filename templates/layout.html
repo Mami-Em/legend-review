@@ -33,8 +33,11 @@
                 <p>Anime review</p>
               </button>
   
-              <button id="hide-menu-btn" class="material-symbols-rounded border border-zinc-300 rounded-full hover:bg-zinc-300">
-                close
+             
+              <button id="hide-menu-btn" class="rounded-full bg-zinc-100 p-2 hover:bg-zinc-200 transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
               </button>
             </div>
   
@@ -148,7 +151,7 @@
 
     {% block body %}{% endblock %}
 
-    <footer>
+    <footer class="lg:max-w-6xl max-w-xl mx-auto">
       <div class="border-t p-4">
         <div class="font-semibold p-2.5">
           Explore a collection of anime and share your thoughts among other anime fans.
