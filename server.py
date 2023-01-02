@@ -105,13 +105,20 @@ def details(id):
 
     data_attributes = anime_details['data']['attributes']
 
+    try:
+        ja_jp = data_attributes['titles']['ja_jp']
+
+    except:
+        ja_jp = 'None'
+
     details = {
         'launch date': d_format(data_attributes['createdAt']),
         'latest update': d_format(data_attributes['updatedAt']),
         'english title': data_attributes['titles']['en_jp'],
-        'japanese title': data_attributes['titles']['ja_jp'],
+        'japanese title': ja_jp,
         'age rating guide': data_attributes['ageRatingGuide'],
-        'episode length': data_attributes['episodeLength']
+        'episode length': data_attributes['episodeLength'],
+        'rating and review': ratings(data_attributes['ratingFrequencies'])
     }
 
     review_api = requests.get(anime_details['data']['relationships']['reviews']['links']['related'])

@@ -10,19 +10,23 @@ def d_format(date):
 
 def ratings(jsonRatings):
 
-    newRatings = {
-        '1': int(jsonRatings['3']),
-        '2': int(jsonRatings['4']),
-        '3': int(jsonRatings['5']), 
-        '4': int(jsonRatings['19']), 
-        '5': int(jsonRatings['20'])
-    }
+    try:
+        newRatings = {
+            '1': int(jsonRatings['3']),
+            '2': int(jsonRatings['4']),
+            '3': int(jsonRatings['5']), 
+            '4': int(jsonRatings['19']), 
+            '5': int(jsonRatings['20'])
+        }
 
-    vote = 0
-    for i in newRatings:
-        vote += newRatings[i]
+        vote = 0
+        for i in newRatings:
+            vote += newRatings[i]
 
-    ratingsPercent = (newRatings['5']*100)/ vote
+        ratingsPercent = (newRatings['5']*100)/ vote
+
+    except:
+        return "None"
 
     return {
         'total_votes': vote,
