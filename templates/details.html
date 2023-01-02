@@ -17,9 +17,9 @@
 
 <div>
     <img src="{{ anime['data']['attributes']['posterImage']['original'] }}" alt="" class="w-30 h-30">
-    <img src="{{ anime['data']['attributes']['coverImage']['original'] }}" alt="" class="w-20 h-20">
-    <h2>{{ anime['data']['attributes']['titles']['en_jp'] }}</h2>
-    <p>{{ anime['data']['attributes']['titles']['ja_jp'] }}</p>
+    {% for item in details %}
+    <p>{{ item | capitalize }}: <span class="text-zinc-400">{{ details[item] }}</span></p>
+    {% endfor %}
     <a href="https://www.youtube.com/embed/{{ anime['data']['attributes']['youtubeVideoId'] }}?enablejsapi=1&wmode=opaque&autoplay=1">trailer</a>
     <h3>Description</h3>
     <p>{{ anime['data']['attributes']['synopsis'] }}</p>

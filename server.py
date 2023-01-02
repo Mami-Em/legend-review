@@ -4,6 +4,8 @@ from datetime import datetime
 from os import environ as env
 from urllib.parse import quote_plus, urlencode
 
+from helpers import d_format, ratings
+
 from authlib.integrations.flask_client import OAuth
 from flask import Flask, redirect, render_template, session, url_for, request, flash
 
@@ -101,6 +103,17 @@ def details(id):
     anime_details_api = requests.get(f"https://kitsu.io/api/edge/anime/{id}")
     anime_details = anime_details_api.json()
 
+    data_attributes = anime_details['data']['attributes']
+
+    details = {
+        'launch date': d_format(data_attributes['createdAt']),
+        'latest update': d_format(data_attributes['updatedAt']),
+        'english title': data_attributes['titles']['en_jp'],
+        'japanese title': data_attributes['titles']['ja_jp'],
+        'age rating guide': data_attributes['ageRatingGuide'],
+        'episode length': data_attributes['episodeLength']
+    }
+
     review_api = requests.get(anime_details['data']['relationships']['reviews']['links']['related'])
     anime_reviews = review_api.json()
 
@@ -120,7 +133,7 @@ def details(id):
                 "review": reviews,
                 "user": user['data']['attributes']['name'],
                 "profile": user['data']['attributes']['avatar']['original'],
-                "publish_date": user['data']['attributes']['updatedAt']
+                "publish_date": d_format(user['data']['attributes']['updatedAt'])
             })
         except:
             ...
@@ -144,6 +157,7 @@ def details(id):
         session=session.get("user"),
         all_reviews=all_reviews,
         db_reviews=reviews,
+        details=details,
         anime=anime_details
     )
 
