@@ -60,3 +60,31 @@
     top: -60px;
   }
 }
+
+
+/* reiew section */
+.show-review-section {
+  animation: showreview .1s;
+}
+
+@keyframes showreview {
+  from {
+    bottom: -50rem;
+  }
+  to {
+    bottom: 8rem;
+  }
+}
+
+.hide-review-section {
+  animation: hidereview .3s;
+}
+
+@keyframes hidereview {
+  from {
+    bottom: 8rem;
+  }
+  to {
+    bottom: -50rem;
+  }
+}
