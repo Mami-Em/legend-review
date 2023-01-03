@@ -62,18 +62,26 @@ def home():
     trend = requests.get("https://kitsu.io/api/edge/trending/anime")
     trending_api = trend.json()
 
-    popular = requests.get("https://kitsu.io/api/edge/anime?sort=-averageRating&page[limit]=20")
+    popular = requests.get("https://kitsu.io/api/edge/anime?sort=-averageRating&page[limit]=20&page[offset]=5")
     most_popular = popular.json()
 
     upcom = requests.get("https://kitsu.io/api/edge/anime?sort=-startDate&page[limit]=20")
     upcoming = upcom.json()
+
+    new_discoveries_api = requests.get("https://kitsu.io/api/edge//anime?sort=-createdAt")
+    new_discoveries = new_discoveries_api.json()
+
+    recent_update_api = requests.get("https://kitsu.io/api/edge//anime?sort=-updatedAt")
+    recent_update = recent_update_api.json()
 
     return render_template(
         "home.html",
         session=session.get("user"),
         trending=trending_api,
         popular=most_popular,
-        upcoming=upcoming
+        upcoming=upcoming,
+        new_discoveries=new_discoveries,
+        recent_update=recent_update
     )
 
 
