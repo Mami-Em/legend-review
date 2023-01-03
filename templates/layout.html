@@ -17,6 +17,12 @@
 </head>
 <body class="text-zinc-900 font-quicksand bg-zinc-50">
 
+    <style>
+      header {
+        z-index: 50;
+      }
+    </style>
+
     <div id="messages"></div>
 
     <section id="menu-section" class="absolute hidden">
@@ -91,7 +97,7 @@
     <section id="search-section" class="absolute hidden">
 
         <div class="w-screen h-screen fixed bottom-0 z-50 backdrop-blur-sm p-4">
-          <div id="search-bar" class="relative border max-w-md mx-auto top-[-60px] rounded-lg px-1 py-2 bg-zinc-50 grid grid-cols-12 content-center items-center">
+          <div id="search-bar" class="relative border max-w-md mx-auto lg:max-w-2xl top-[-60px] rounded-lg p-2 pr-3 bg-zinc-50 grid grid-cols-12 content-center items-center">
 
             <div class="flex justify-center items-center text-zinc-600">
               <span class="material-symbols-rounded">
@@ -99,16 +105,18 @@
               </span>
             </div>
 
-            <input type="text" placeholder="Search" name="search" id="search" autocomplete="off" class="py-1 bg-zinc-50 w-full outline-none col-span-10">
+            <input type="text" placeholder="Search" name="search" id="search" autocomplete="off" class="p-1 bg-zinc-50 w-full font-medium outline-none col-span-10">
             
             <div class="flex justify-center items-center text-zinc-600">
-              <button id="close-search" class="material-symbols-rounded rounded-full hover:bg-zinc-300">
-                close
+              <button id="close-search" class="rounded-full bg-zinc-100 p-2 hover:bg-zinc-200 transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
               </button>
             </div>
           </div>
 
-          <div id="result-section" class="py-4 max-w-md mx-auto hidden">
+          <div id="result-section" class="py-4 max-w-md mx-auto lg:max-w-2xl hidden">
             <div id="search-result" class="max-h-96 rounded-t-lg bg-zinc-50 overflow-y-scroll scroll-smooth scrollbar-hide relative border p-2 grid grid-cols-3">
             </div>
 

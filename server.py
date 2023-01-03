@@ -68,10 +68,10 @@ def home():
     upcom = requests.get("https://kitsu.io/api/edge/anime?sort=-startDate&page[limit]=20")
     upcoming = upcom.json()
 
-    new_discoveries_api = requests.get("https://kitsu.io/api/edge//anime?sort=-createdAt")
+    new_discoveries_api = requests.get("https://kitsu.io/api/edge//anime?sort=-createdAt&page[limit]=20")
     new_discoveries = new_discoveries_api.json()
 
-    recent_update_api = requests.get("https://kitsu.io/api/edge//anime?sort=-updatedAt")
+    recent_update_api = requests.get("https://kitsu.io/api/edge//anime?sort=-updatedAt&page[limit]=20")
     recent_update = recent_update_api.json()
 
     return render_template(
@@ -122,7 +122,7 @@ def details(id):
     details = {
         'launch date': d_format(data_attributes['createdAt']),
         'latest update': d_format(data_attributes['updatedAt']),
-        'english title': data_attributes['titles']['en_jp'],
+        'english title': data_attributes['canonicalTitle'],
         'japanese title': ja_jp,
         'age rating guide': data_attributes['ageRatingGuide'],
         'episode length': data_attributes['episodeLength'],
