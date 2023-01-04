@@ -4,7 +4,7 @@ from datetime import datetime
 from os import environ as env
 from urllib.parse import quote_plus, urlencode
 
-from helpers import d_format, ratings
+from helpers import d_format, ratings, format_rating
 
 from authlib.integrations.flask_client import OAuth
 from flask import Flask, redirect, render_template, session, url_for, request, flash
@@ -148,7 +148,8 @@ def details(id):
                 "review": reviews,
                 "user": user['data']['attributes']['name'],
                 "profile": user['data']['attributes']['avatar']['original'],
-                "publish_date": d_format(user['data']['attributes']['updatedAt'])
+                "publish_date": d_format(user['data']['attributes']['updatedAt']),
+                "rating": format_rating(review['attributes']['rating'])
             })
         except:
             ...

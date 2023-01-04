@@ -32,3 +32,6 @@ def ratings(jsonRatings):
         'total_votes': vote,
         'avg_vote': round(ratingsPercent*5)/100
     }
+
+def format_rating(f):
+    return round((f * 5)/20)
