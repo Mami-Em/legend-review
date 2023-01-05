@@ -1,341 +1,341 @@
 <!-- review -->
-      <section id="review-section" class="absolute hidden">
-        <div class="w-screen h-screen fixed z-50 backdrop-blur-sm py-4">
-          <!-- -bottom-96 -->
-          <div id="review-sh" class="absolute left-1/2 -bottom-[50rem] -translate-x-1/2 h-4/5 lg:max-h-md border rounded-lg bg-zinc-50 w-11/12 max-w-lg mx-auto">
-            <div class="flex justify-between items-center px-6 py-4">
-              <h2 class="text-xl font-semibold text-zinc-700">My Hero Academia</h2>
+<section id="review-section" class="absolute hidden">
+  <div class="w-screen h-screen fixed z-50 backdrop-blur-sm py-4">
+    <!-- -bottom-96 -->
+    <div id="review-sh" class="absolute left-1/2 -bottom-[50rem] -translate-x-1/2 h-4/5 lg:max-h-md border rounded-lg bg-zinc-50 w-11/12 max-w-lg mx-auto">
+      <div class="flex justify-between items-center px-6 py-4">
+        <h2 class="text-xl font-semibold text-zinc-700">My Hero Academia</h2>
 
-              <button id="close-review-section" class="rounded-full bg-zinc-100 p-2 hover:bg-zinc-200 transition duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-
-            <div class="px-6 flex flex-col gap-3">
-              <p class="font-medium">Reviews are public and include your account info</p>
-              <p class="text-zinc-400 font-medium text-sm tracking-wide">
-                Everyone can see your Account name and photo associated with your review.
-              </p>
-            </div>
-
-
-            <div class="p-6 flex flex-col gap-6">
-
-              <div class="grid grid-cols-5">
-                
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 hover:scale-110 transition duration-300 hover:cursor-pointer review-stars" data-rate="1">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 hover:scale-110 transition duration-300 hover:cursor-pointer review-stars" data-rate="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 hover:scale-110 transition duration-300 hover:cursor-pointer review-stars" data-rate="3">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 hover:scale-110 transition duration-300 hover:cursor-pointer review-stars" data-rate="4">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 hover:scale-110 transition duration-300 hover:cursor-pointer review-stars" data-rate="5">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
-                </svg>
-                
-                                                               
-              </div>
-  
-              <form name="send-review">
-                <textarea name="review" id="" class="rounded-lg bg-zinc-50 border border-zinc-300 w-full h-44 outline-none p-4 text-sm" placeholder="Share your experience"></textarea>
-                <div class="absolute bottom-0 right-0 p-6">
-                  <button class="border border-zinc-900 hover:bg-zinc-800 hover:text-zinc-50 transition duration-300 px-6 py-2 rounded-lg text-sm font-medium" type="submit">
-                    Submit
-                  </button>
-                </div>
-              </form>
-
-            </div>
-
-            
-          </div>
-        
-        </div>
-      </section>
-      <!-- review -->
-
-
-      <section id="menu-section" class="absolute hidden">
-      <div class="w-screen h-screen fixed z-50 backdrop-blur-sm">
-        <div id="menu" class="border-r rounded-r-xl max-w-xs w-3/5 h-full shadow-xl bg-zinc-50 overflow-hidden absolute left-[-300px]">
-
-          <!-- section 1 -->
-          <div class="flex justify-between items-center px-6 py-4">
-            <button class="flex gap-2 items-center text-zinc-500 font-bold">
-              <img src="./vite.svg" class="w-8" alt="">
-                
-                
-                
-              <p>Anime review</p>
-            </button>
-
-            <button id="hide-menu-btn" class="material-symbols-rounded border border-zinc-300 rounded-full hover:bg-zinc-300">
-              close
-            </button>
-          </div>
-
-          <!-- section 2 -->
-          <div class="px-2">
-
-            <div class="py-4 w-full font-bold text-sm">
-              
-              <a href="" class="group">
-                <div class="rounded-lg p-2 px-4 grid grid-cols-5 items-center group-hover:bg-zinc-100">
-                  
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-8 h-8 group-hover:opacity-75 transition duration-100 ease-in-out">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                  </svg>                  
-                  
-                  <p class="col-span-4">Home</p>
-                </div>
-                
-              </a>
-              
-              <a href="" class="group">
-                <div class="rounded-lg p-2 px-4 grid grid-cols-5 items-center group-hover:bg-zinc-100">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-8 h-8 group-hover:opacity-75 transition duration-100 ease-in-out">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                  </svg>
-                  
-                  <p class="col-span-4">My Favorites</p>
-                  
-                </div>
-              </a>
-
-
-              <a href="" class="group">
-                <div class="rounded-lg p-2 px-4 grid grid-cols-5 items-center group-hover:bg-zinc-100">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-8 h-8 group-hover:opacity-75 transition duration-100 ease-in-out">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                  </svg>
-                  
-                  <p class="col-span-4">Profile</p>
-                </div>
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
+        <button id="close-review-section" class="rounded-full bg-zinc-100 p-2 hover:bg-zinc-200 transition duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
       </div>
-      </section> 
-    
 
-      <section id="search-section" class="absolute hidden">
+      <div class="px-6 flex flex-col gap-3">
+        <p class="font-medium">Reviews are public and include your account info</p>
+        <p class="text-zinc-400 font-medium text-sm tracking-wide">
+          Everyone can see your Account name and photo associated with your review.
+        </p>
+      </div>
 
-        <div class="w-screen h-screen fixed bottom-0 z-50 backdrop-blur-sm p-4">
-          <div id="search-bar" class="relative border max-w-md mx-auto top-[-60px] rounded-lg px-1 py-2 bg-zinc-50 grid grid-cols-12 content-center items-center">
 
-            <div class="flex justify-center items-center text-zinc-600">
-              <span class="material-symbols-rounded">
-                search
-              </span>
-            </div>
+      <div class="p-6 flex flex-col gap-6">
 
-            <input type="text" placeholder="Search" name="search" id="search" autocomplete="off" class="py-1 bg-zinc-50 w-full outline-none col-span-10">
-            
-            <div class="flex justify-center items-center text-zinc-600">
-              <button id="close-search" class="material-symbols-rounded rounded-full hover:bg-zinc-300">
-                close
-              </button>
-            </div>
-          </div>
+        <div class="grid grid-cols-5">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 hover:scale-110 transition duration-300 hover:cursor-pointer review-stars" data-rate="1">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 hover:scale-110 transition duration-300 hover:cursor-pointer review-stars" data-rate="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 hover:scale-110 transition duration-300 hover:cursor-pointer review-stars" data-rate="3">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 hover:scale-110 transition duration-300 hover:cursor-pointer review-stars" data-rate="4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 hover:scale-110 transition duration-300 hover:cursor-pointer review-stars" data-rate="5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+          </svg>
+          
+                                                          
         </div>
 
-      </section>
-<!-- seacrh -->
-      <section id="search-section" class="absolute hidden">
-
-        <div class="w-screen h-screen fixed bottom-0 z-50 backdrop-blur-sm p-4">
-          <div id="search-bar" class="relative border max-w-md mx-auto lg:max-w-2xl rounded-lg p-2 pr-3 bg-zinc-50 grid grid-cols-12 content-center items-center">
-
-            <div class="flex justify-center items-center text-zinc-600">
-              <span class="material-symbols-rounded">
-                search
-              </span>
-            </div>
-
-            <input type="text" placeholder="Search" name="search" id="search" autocomplete="off" class="p-1 bg-zinc-50 w-full font-medium outline-none col-span-10">
-            
-            <div class="flex justify-center items-center text-zinc-600">
-              <button id="close-search" class="rounded-full bg-zinc-100 p-2 hover:bg-zinc-200 transition duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
+        <form name="send-review">
+          <textarea name="review" id="" class="rounded-lg bg-zinc-50 border border-zinc-300 w-full h-44 outline-none p-4 text-sm" placeholder="Share your experience"></textarea>
+          <div class="absolute bottom-0 right-0 p-6">
+            <button class="border border-zinc-900 hover:bg-zinc-800 hover:text-zinc-50 transition duration-300 px-6 py-2 rounded-lg text-sm font-medium" type="submit">
+              Submit
+            </button>
           </div>
+        </form>
 
-          <!-- result section -->
-          <div id="result-section" class="py-4 max-w-md mx-auto lg:max-w-2xl">
+      </div>
 
-            <div class="max-h-96 rounded-t-lg bg-zinc-50 overflow-y-scroll scroll-smooth scrollbar-hide relative border p-2 grid grid-cols-3">
-              
-              <div class="flex flex-col gap-2 rounded-lg p-2">
-
-                <button class="hover:opacity-75 hover:transition hover:duration-300 rounded-lg border h-32 bg-cover lg:h-54" style="background-image: url(./nezuko.jpg);">
-                </button>
-
-                <div class="text-xs font-bold">
-                  <p>Cowboy bobep: one draem word</p>
-                  <p class="text-zinc-400">230 likes</p>
-                </div>
-
-              </div>
-
-              <div class="flex flex-col gap-2 rounded-lg p-2">
-
-                <button class="hover:opacity-75 hover:transition hover:duration-300 rounded-lg border h-32 bg-cover lg:h-54" style="background-image: url(./nezuko.jpg);">
-                </button>
-
-                <div class="text-xs font-bold">
-                  <p>Cowboy bobep: one draem word</p>
-                  <p class="text-zinc-400">230 likes</p>
-                </div>
-
-              </div>
-
-              <div class="flex flex-col gap-2 rounded-lg p-2">
-
-                <button class="hover:opacity-75 hover:transition hover:duration-300 rounded-lg border h-32 bg-cover lg:h-54" style="background-image: url(./nezuko.jpg);">
-                </button>
-
-                <div class="text-xs font-bold">
-                  <p>Cowboy bobep: one draem word</p>
-                  <p class="text-zinc-400">230 likes</p>
-                </div>
-
-              </div>
-
-              <div class="flex flex-col gap-2 rounded-lg p-2">
-
-                <button class="hover:opacity-75 hover:transition hover:duration-300 rounded-lg border h-32 bg-cover lg:h-54" style="background-image: url(./nezuko.jpg);">
-                </button>
-
-                <div class="text-xs font-bold">
-                  <p>Cowboy bobep: one draem word</p>
-                  <p class="text-zinc-400">230 likes</p>
-                </div>
-
-              </div>
-
-              <div class="flex flex-col gap-2 rounded-lg p-2">
-
-                <button class="hover:opacity-75 hover:transition hover:duration-300 rounded-lg border h-32 bg-cover lg:h-54" style="background-image: url(./nezuko.jpg);">
-                </button>
-
-                <div class="text-xs font-bold">
-                  <p>Cowboy bobep: one draem word</p>
-                  <p class="text-zinc-400">230 likes</p>
-                </div>
-
-              </div>
-
-              <div class="flex flex-col gap-2 rounded-lg p-2">
-
-                <button class="hover:opacity-75 hover:transition hover:duration-300 rounded-lg border h-32 bg-cover lg:h-54" style="background-image: url(./nezuko.jpg);">
-                </button>
-
-                <div class="text-xs font-bold">
-                  <p>Cowboy bobep: one draem word</p>
-                  <p class="text-zinc-400">230 likes</p>
-                </div>
-
-              </div>
-
-              <div class="flex flex-col gap-2 rounded-lg p-2">
-
-                <button class="hover:opacity-75 hover:transition hover:duration-300 rounded-lg border h-32 bg-cover lg:h-54" style="background-image: url(./nezuko.jpg);">
-                </button>
-
-                <div class="text-xs font-bold">
-                  <p>Cowboy bobep: one draem word</p>
-                  <p class="text-zinc-400">230 likes</p>
-                </div>
-
-              </div>
-
-              <div class="flex flex-col gap-2 rounded-lg p-2">
-
-                <button class="hover:opacity-75 hover:transition hover:duration-300 rounded-lg border h-32 bg-cover lg:h-54" style="background-image: url(./nezuko.jpg);">
-                </button>
-
-                <div class="text-xs font-bold">
-                  <p>Cowboy bobep: one draem word</p>
-                  <p class="text-zinc-400">230 likes</p>
-                </div>
-
-              </div>
-
-              <div class="flex flex-col gap-2 rounded-lg p-2">
-
-                <button class="hover:opacity-75 hover:transition hover:duration-300 rounded-lg border h-32 bg-cover lg:h-54" style="background-image: url(./nezuko.jpg);">
-                </button>
-
-                <div class="text-xs font-bold">
-                  <p>Cowboy bobep: one draem word</p>
-                  <p class="text-zinc-400">230 likes</p>
-                </div>
-
-              </div>
-
-              <div class="flex flex-col gap-2 rounded-lg p-2">
-
-                <button class="hover:opacity-75 hover:transition hover:duration-300 rounded-lg border h-32 bg-cover lg:h-54" style="background-image: url(./nezuko.jpg);">
-                </button>
-
-                <div class="text-xs font-bold">
-                  <p>Cowboy bobep: one draem word</p>
-                  <p class="text-zinc-400">230 likes</p>
-                </div>
-
-              </div>
-
-              
-            
-            </div>
-            <div class="border-x border-b bg-zinc-100 py-2 px-4 text-xs font-bold rounded-b-lg text-zinc-400 w-full">
-              Result (23)
-            </div>
-
-          </div>
-        </div>
-
-      </section>
       
-      <header class="flex justify-between items-center px-4 sticky top-0 shadow-md bg-zinc-50 z-50">
-        <div class="lg:hidden">
-          <button id="menu-btn" class="material-symbols-rounded rounded-full w-10 h-10 flex justify-center items-center hover:bg-zinc-200">
-            menu
-          </button>
-        </div>
+    </div>
+  
+  </div>
+</section>
+<!-- review -->
 
-        <button>
-          <img src="/vite.svg" class="w-8 lg:w-12 py-2"/>
+
+<section id="menu-section" class="absolute hidden">
+  <div class="w-screen h-screen fixed z-50 backdrop-blur-sm">
+    <div id="menu" class="border-r rounded-r-xl max-w-xs w-3/5 h-full shadow-xl bg-zinc-50 overflow-hidden absolute left-[-300px]">
+
+      <!-- section 1 -->
+      <div class="flex justify-between items-center px-6 py-4">
+        <button class="flex gap-2 items-center text-zinc-500 font-bold">
+          <img src="./vite.svg" class="w-8" alt="">
+            
+            
+            
+          <p>Anime review</p>
         </button>
 
-        <div class="font-semibold lg:flex justify-between w-1/3 hidden">
-          <a class="hover:opacity-50 transition duration-300" href="">Home</a>
-          <a class="hover:opacity-50 transition duration-300" href="">My reviews</a>
-          <a class="hover:opacity-50 transition duration-300" href="">Profile</a>
+        <button id="hide-menu-btn" class="material-symbols-rounded border border-zinc-300 rounded-full hover:bg-zinc-300">
+          close
+        </button>
+      </div>
+
+      <!-- section 2 -->
+      <div class="px-2">
+
+        <div class="py-4 w-full font-bold text-sm">
+          
+          <a href="" class="group">
+            <div class="rounded-lg p-2 px-4 grid grid-cols-5 items-center group-hover:bg-zinc-100">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-8 h-8 group-hover:opacity-75 transition duration-100 ease-in-out">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+              </svg>                  
+              
+              <p class="col-span-4">Home</p>
+            </div>
+            
+          </a>
+          
+          <a href="" class="group">
+            <div class="rounded-lg p-2 px-4 grid grid-cols-5 items-center group-hover:bg-zinc-100">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-8 h-8 group-hover:opacity-75 transition duration-100 ease-in-out">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+              </svg>
+              
+              <p class="col-span-4">My Favorites</p>
+              
+            </div>
+          </a>
+
+
+          <a href="" class="group">
+            <div class="rounded-lg p-2 px-4 grid grid-cols-5 items-center group-hover:bg-zinc-100">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-8 h-8 group-hover:opacity-75 transition duration-100 ease-in-out">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+              </svg>
+              
+              <p class="col-span-4">Profile</p>
+            </div>
+          </a>
+
         </div>
 
-        <div class="flex justify-between items-center gap-2">
-          <button id="search-btn" class="material-symbols-rounded rounded-full w-11 h-11 hover:bg-zinc-200 ">
-            search
+      </div>
+
+    </div>
+  </div>
+</section> 
+
+
+<section id="search-section" class="absolute hidden">
+
+  <div class="w-screen h-screen fixed bottom-0 z-50 backdrop-blur-sm p-4">
+    <div id="search-bar" class="relative border max-w-md mx-auto top-[-60px] rounded-lg px-1 py-2 bg-zinc-50 grid grid-cols-12 content-center items-center">
+
+      <div class="flex justify-center items-center text-zinc-600">
+        <span class="material-symbols-rounded">
+          search
+        </span>
+      </div>
+
+      <input type="text" placeholder="Search" name="search" id="search" autocomplete="off" class="py-1 bg-zinc-50 w-full outline-none col-span-10">
+      
+      <div class="flex justify-center items-center text-zinc-600">
+        <button id="close-search" class="material-symbols-rounded rounded-full hover:bg-zinc-300">
+          close
+        </button>
+      </div>
+    </div>
+  </div>
+
+</section>
+<!-- seacrh -->
+<section id="search-section" class="absolute hidden">
+
+  <div class="w-screen h-screen fixed bottom-0 z-50 backdrop-blur-sm p-4">
+    <div id="search-bar" class="relative border max-w-md mx-auto lg:max-w-2xl rounded-lg p-2 pr-3 bg-zinc-50 grid grid-cols-12 content-center items-center">
+
+      <div class="flex justify-center items-center text-zinc-600">
+        <span class="material-symbols-rounded">
+          search
+        </span>
+      </div>
+
+      <input type="text" placeholder="Search" name="search" id="search" autocomplete="off" class="p-1 bg-zinc-50 w-full font-medium outline-none col-span-10">
+      
+      <div class="flex justify-center items-center text-zinc-600">
+        <button id="close-search" class="rounded-full bg-zinc-100 p-2 hover:bg-zinc-200 transition duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- result section -->
+    <div id="result-section" class="py-4 max-w-md mx-auto lg:max-w-2xl">
+
+      <div class="max-h-96 rounded-t-lg bg-zinc-50 overflow-y-scroll scroll-smooth scrollbar-hide relative border p-2 grid grid-cols-3">
+        
+        <div class="flex flex-col gap-2 rounded-lg p-2">
+
+          <button class="hover:opacity-75 hover:transition hover:duration-300 rounded-lg border h-32 bg-cover lg:h-54" style="background-image: url(./nezuko.jpg);">
           </button>
-          <button class="rounded-full w-12 h-12 p-2 hover:bg-zinc-200  overflow-hidden">
-            <img class="rounded-full bg-cover w-full h-full"
-            src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80" alt="profile" class="bg-cover w-full h-full" alt="">
-          </button>
+
+          <div class="text-xs font-bold">
+            <p>Cowboy bobep: one draem word</p>
+            <p class="text-zinc-400">230 likes</p>
+          </div>
+
         </div>
-      </header>
+
+        <div class="flex flex-col gap-2 rounded-lg p-2">
+
+          <button class="hover:opacity-75 hover:transition hover:duration-300 rounded-lg border h-32 bg-cover lg:h-54" style="background-image: url(./nezuko.jpg);">
+          </button>
+
+          <div class="text-xs font-bold">
+            <p>Cowboy bobep: one draem word</p>
+            <p class="text-zinc-400">230 likes</p>
+          </div>
+
+        </div>
+
+        <div class="flex flex-col gap-2 rounded-lg p-2">
+
+          <button class="hover:opacity-75 hover:transition hover:duration-300 rounded-lg border h-32 bg-cover lg:h-54" style="background-image: url(./nezuko.jpg);">
+          </button>
+
+          <div class="text-xs font-bold">
+            <p>Cowboy bobep: one draem word</p>
+            <p class="text-zinc-400">230 likes</p>
+          </div>
+
+        </div>
+
+        <div class="flex flex-col gap-2 rounded-lg p-2">
+
+          <button class="hover:opacity-75 hover:transition hover:duration-300 rounded-lg border h-32 bg-cover lg:h-54" style="background-image: url(./nezuko.jpg);">
+          </button>
+
+          <div class="text-xs font-bold">
+            <p>Cowboy bobep: one draem word</p>
+            <p class="text-zinc-400">230 likes</p>
+          </div>
+
+        </div>
+
+        <div class="flex flex-col gap-2 rounded-lg p-2">
+
+          <button class="hover:opacity-75 hover:transition hover:duration-300 rounded-lg border h-32 bg-cover lg:h-54" style="background-image: url(./nezuko.jpg);">
+          </button>
+
+          <div class="text-xs font-bold">
+            <p>Cowboy bobep: one draem word</p>
+            <p class="text-zinc-400">230 likes</p>
+          </div>
+
+        </div>
+
+        <div class="flex flex-col gap-2 rounded-lg p-2">
+
+          <button class="hover:opacity-75 hover:transition hover:duration-300 rounded-lg border h-32 bg-cover lg:h-54" style="background-image: url(./nezuko.jpg);">
+          </button>
+
+          <div class="text-xs font-bold">
+            <p>Cowboy bobep: one draem word</p>
+            <p class="text-zinc-400">230 likes</p>
+          </div>
+
+        </div>
+
+        <div class="flex flex-col gap-2 rounded-lg p-2">
+
+          <button class="hover:opacity-75 hover:transition hover:duration-300 rounded-lg border h-32 bg-cover lg:h-54" style="background-image: url(./nezuko.jpg);">
+          </button>
+
+          <div class="text-xs font-bold">
+            <p>Cowboy bobep: one draem word</p>
+            <p class="text-zinc-400">230 likes</p>
+          </div>
+
+        </div>
+
+        <div class="flex flex-col gap-2 rounded-lg p-2">
+
+          <button class="hover:opacity-75 hover:transition hover:duration-300 rounded-lg border h-32 bg-cover lg:h-54" style="background-image: url(./nezuko.jpg);">
+          </button>
+
+          <div class="text-xs font-bold">
+            <p>Cowboy bobep: one draem word</p>
+            <p class="text-zinc-400">230 likes</p>
+          </div>
+
+        </div>
+
+        <div class="flex flex-col gap-2 rounded-lg p-2">
+
+          <button class="hover:opacity-75 hover:transition hover:duration-300 rounded-lg border h-32 bg-cover lg:h-54" style="background-image: url(./nezuko.jpg);">
+          </button>
+
+          <div class="text-xs font-bold">
+            <p>Cowboy bobep: one draem word</p>
+            <p class="text-zinc-400">230 likes</p>
+          </div>
+
+        </div>
+
+        <div class="flex flex-col gap-2 rounded-lg p-2">
+
+          <button class="hover:opacity-75 hover:transition hover:duration-300 rounded-lg border h-32 bg-cover lg:h-54" style="background-image: url(./nezuko.jpg);">
+          </button>
+
+          <div class="text-xs font-bold">
+            <p>Cowboy bobep: one draem word</p>
+            <p class="text-zinc-400">230 likes</p>
+          </div>
+
+        </div>
+
+        
+      
+      </div>
+      <div class="border-x border-b bg-zinc-100 py-2 px-4 text-xs font-bold rounded-b-lg text-zinc-400 w-full">
+        Result (23)
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<header class="flex justify-between items-center px-4 sticky top-0 shadow-md bg-zinc-50 z-50">
+  <div class="lg:hidden">
+    <button id="menu-btn" class="material-symbols-rounded rounded-full w-10 h-10 flex justify-center items-center hover:bg-zinc-200">
+      menu
+    </button>
+  </div>
+
+  <button>
+    <img src="/vite.svg" class="w-8 lg:w-12 py-2"/>
+  </button>
+
+  <div class="font-semibold lg:flex justify-between w-1/3 hidden">
+    <a class="hover:opacity-50 transition duration-300" href="">Home</a>
+    <a class="hover:opacity-50 transition duration-300" href="">My reviews</a>
+    <a class="hover:opacity-50 transition duration-300" href="">Profile</a>
+  </div>
+
+  <div class="flex justify-between items-center gap-2">
+    <button id="search-btn" class="material-symbols-rounded rounded-full w-11 h-11 hover:bg-zinc-200 ">
+      search
+    </button>
+    <button class="rounded-full w-12 h-12 p-2 hover:bg-zinc-200  overflow-hidden">
+      <img class="rounded-full bg-cover w-full h-full"
+      src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80" alt="profile" class="bg-cover w-full h-full" alt="">
+    </button>
+  </div>
+</header>
