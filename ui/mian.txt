@@ -1,0 +1,836 @@
+<main class="max-w-xl mx-auto lg:max-w-6xl lg:py-12">
+
+        <section id="first-section" class="pl-4 py-4 md:p-4">
+          <div class="flex flex-col gap-2">
+            <div class="p-2.5">
+              <h3 class="text-xl font-semibold">Most popular</h3>
+              <p class="text-gray-400 text-sm font-semibold tracking-wider">Most watched anime</p>
+            </div>
+    
+    
+            <div class="flex flex-row snap-x snap-mandatory overflow-x-scroll scroll-smooth scrollbar-hide">
+                
+                <button data-kitsu="44081" class="anime snap-start rounded-lg p-2.5 w-[156px] xl:w-[225.5px] group">
+    
+                    <div class="rounded-lg h-48 w-[136px] xl:w-[205px] xl:h-60 shadow-md bg-cover group-hover:opacity-75" style="background-image: url(https://media.kitsu.io/anime/44081/poster_image/4b749200e30cbdb20ab4ef2c6961688b.jpg)"></div>
+                    <div class="flex flex-col text-xs font-semibold pt-2">
+                        <p class="text-start truncate">Kimetsu no Yaiba: Yuukaku-hen</p>
+                        <p class="text-start text-zinc-400 flex items-center gap-2">87.5
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg>
+                          
+                        </p>
+                    </div>
+    
+                </button>
+                
+                <button data-kitsu="44389" class="anime snap-start rounded-lg p-2.5 w-[156px] xl:w-[225.5px] group">
+    
+                    <div class="rounded-lg h-48 w-[136px] xl:w-[205px] xl:h-60 shadow-md bg-cover group-hover:opacity-75" style="background-image: url(https://media.kitsu.io/anime/poster_images/44389/original.jpg)"></div>
+                    <div class="flex flex-col text-xs font-semibold pt-2">
+                        <p class="text-start truncate">Kimetsu no Yaiba: Natagumo Yama Hen</p>
+                        <p class="text-start text-zinc-400 flex items-center gap-2">87.18
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg>
+                          
+                        </p>
+                    </div>
+    
+                </button>
+                
+                <button data-kitsu="45249" class="anime snap-start rounded-lg p-2.5 w-[156px] xl:w-[225.5px] group">
+    
+                    <div class="rounded-lg h-48 w-[136px] xl:w-[205px] xl:h-60 shadow-md bg-cover group-hover:opacity-75" style="background-image: url(https://media.kitsu.io/anime/45249/poster_image/2ec6301aa7db25544d2f18edd73d23fe.jpg)"></div>
+                    <div class="flex flex-col text-xs font-semibold pt-2">
+                        <p class="text-start truncate">Kimetsu no Yaiba: Mugen Ressha-hen</p>
+                        <p class="text-start text-zinc-400 flex items-center gap-2">87.15
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg>
+                          
+                        </p>
+                    </div>
+    
+                </button>
+                
+                <button data-kitsu="42586" class="anime snap-start rounded-lg p-2.5 w-[156px] xl:w-[225.5px] group">
+    
+                    <div class="rounded-lg h-48 w-[136px] xl:w-[205px] xl:h-60 shadow-md bg-cover group-hover:opacity-75" style="background-image: url(https://media.kitsu.io/anime/poster_images/42586/original.jpg)"></div>
+                    <div class="flex flex-col text-xs font-semibold pt-2">
+                        <p class="text-start truncate">Kimetsu no Yaiba: Mugen Ressha-hen</p>
+                        <p class="text-start text-zinc-400 flex items-center gap-2">86.76
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg>
+                          
+                        </p>
+                    </div>
+    
+                </button>
+                
+                <button data-kitsu="45254" class="anime snap-start rounded-lg p-2.5 w-[156px] xl:w-[225.5px] group">
+    
+                    <div class="rounded-lg h-48 w-[136px] xl:w-[205px] xl:h-60 shadow-md bg-cover group-hover:opacity-75" style="background-image: url(https://media.kitsu.io/anime/45254/poster_image/d3362fdccea0df551e75cd41d71e2d1f.jpg)"></div>
+                    <div class="flex flex-col text-xs font-semibold pt-2">
+                        <p class="text-start truncate">Kimetsu no Yaiba: Tsuzumi Yashiki Hen</p>
+                        <p class="text-start text-zinc-400 flex items-center gap-2">86.63
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg>
+                          
+                        </p>
+                    </div>
+    
+                </button>
+                
+                <button data-kitsu="45253" class="anime snap-start rounded-lg p-2.5 w-[156px] xl:w-[225.5px] group">
+    
+                    <div class="rounded-lg h-48 w-[136px] xl:w-[205px] xl:h-60 shadow-md bg-cover group-hover:opacity-75" style="background-image: url(https://media.kitsu.io/anime/45253/poster_image/3bdd45169190776d4cd0aaa994047da7.jpg)"></div>
+                    <div class="flex flex-col text-xs font-semibold pt-2">
+                        <p class="text-start truncate">Kimetsu no Yaiba: Asakusa Hen</p>
+                        <p class="text-start text-zinc-400 flex items-center gap-2">86.49
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg>
+                          
+                        </p>
+                    </div>
+    
+                </button>
+                
+                <button data-kitsu="44390" class="anime snap-start rounded-lg p-2.5 w-[156px] xl:w-[225.5px] group">
+    
+                    <div class="rounded-lg h-48 w-[136px] xl:w-[205px] xl:h-60 shadow-md bg-cover group-hover:opacity-75" style="background-image: url(https://media.kitsu.io/anime/poster_images/44390/original.jpg)"></div>
+                    <div class="flex flex-col text-xs font-semibold pt-2">
+                        <p class="text-start truncate">Kimetsu no Yaiba: Hashira Gou Kaigi - Chouyashiki Hen</p>
+                        <p class="text-start text-zinc-400 flex items-center gap-2">86.46
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg>
+                          
+                        </p>
+                    </div>
+    
+                </button>
+                
+                <button data-kitsu="41370" class="anime snap-start rounded-lg p-2.5 w-[156px] xl:w-[225.5px] group">
+    
+                    <div class="rounded-lg h-48 w-[136px] xl:w-[205px] xl:h-60 shadow-md bg-cover group-hover:opacity-75" style="background-image: url(https://media.kitsu.io/anime/poster_images/41370/original.jpg)"></div>
+                    <div class="flex flex-col text-xs font-semibold pt-2">
+                        <p class="text-start truncate">Kimetsu no Yaiba</p>
+                        <p class="text-start text-zinc-400 flex items-center gap-2">86.33
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg>
+                          
+                        </p>
+                    </div>
+    
+                </button>
+                
+                <button data-kitsu="45398" class="anime snap-start rounded-lg p-2.5 w-[156px] xl:w-[225.5px] group">
+    
+                    <div class="rounded-lg h-48 w-[136px] xl:w-[205px] xl:h-60 shadow-md bg-cover group-hover:opacity-75" style="background-image: url(https://media.kitsu.io/anime/45398/poster_image/cc0bbc0dd2a123fb79b041078fce6f89.jpg)"></div>
+                    <div class="flex flex-col text-xs font-semibold pt-2">
+                        <p class="text-start truncate">SPY×FAMILY</p>
+                        <p class="text-start text-zinc-400 flex items-center gap-2">86.32
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg>
+                          
+                        </p>
+                    </div>
+    
+                </button>
+                
+                <button data-kitsu="42765" class="anime snap-start rounded-lg p-2.5 w-[156px] xl:w-[225.5px] group">
+    
+                    <div class="rounded-lg h-48 w-[136px] xl:w-[205px] xl:h-60 shadow-md bg-cover group-hover:opacity-75" style="background-image: url(https://media.kitsu.io/anime/42765/poster_image/5f099d83883544fc6200be91706d70e0.jpg)"></div>
+                    <div class="flex flex-col text-xs font-semibold pt-2">
+                        <p class="text-start truncate">Jujutsu Kaisen</p>
+                        <p class="text-start text-zinc-400 flex items-center gap-2">86.0
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg>
+                          
+                        </p>
+                    </div>
+    
+                </button>
+                
+                <button data-kitsu="44388" class="anime snap-start rounded-lg p-2.5 w-[156px] xl:w-[225.5px] group">
+    
+                    <div class="rounded-lg h-48 w-[136px] xl:w-[205px] xl:h-60 shadow-md bg-cover group-hover:opacity-75" style="background-image: url(https://media.kitsu.io/anime/poster_images/44388/original.jpg)"></div>
+                    <div class="flex flex-col text-xs font-semibold pt-2">
+                        <p class="text-start truncate">Kimetsu no Yaiba: Kyoudai no Kizuna</p>
+                        <p class="text-start text-zinc-400 flex items-center gap-2">85.85
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg>
+                          
+                        </p>
+                    </div>
+    
+                </button>
+                
+                <button data-kitsu="43806" class="anime snap-start rounded-lg p-2.5 w-[156px] xl:w-[225.5px] group">
+    
+                    <div class="rounded-lg h-48 w-[136px] xl:w-[205px] xl:h-60 shadow-md bg-cover group-hover:opacity-75" style="background-image: url(https://media.kitsu.io/anime/43806/poster_image/cefec27a530ff9faac1b2fc238acad13.jpg)"></div>
+                    <div class="flex flex-col text-xs font-semibold pt-2">
+                        <p class="text-start truncate">Chainsaw Man</p>
+                        <p class="text-start text-zinc-400 flex items-center gap-2">85.6
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg>
+                          
+                        </p>
+                    </div>
+    
+                </button>
+                
+                <button data-kitsu="45619" class="anime snap-start rounded-lg p-2.5 w-[156px] xl:w-[225.5px] group">
+    
+                    <div class="rounded-lg h-48 w-[136px] xl:w-[205px] xl:h-60 shadow-md bg-cover group-hover:opacity-75" style="background-image: url(https://media.kitsu.io/anime/45619/poster_image/bd256d80863e9a363ebc468a4aee0823.jpg)"></div>
+                    <div class="flex flex-col text-xs font-semibold pt-2">
+                        <p class="text-start truncate">SPY x FAMILY Part 2</p>
+                        <p class="text-start text-zinc-400 flex items-center gap-2">85.58
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg>
+                          
+                        </p>
+                    </div>
+    
+                </button>
+                
+                <button data-kitsu="42422" class="anime snap-start rounded-lg p-2.5 w-[156px] xl:w-[225.5px] group">
+    
+                    <div class="rounded-lg h-48 w-[136px] xl:w-[205px] xl:h-60 shadow-md bg-cover group-hover:opacity-75" style="background-image: url(https://media.kitsu.io/anime/poster_images/42422/original.png)"></div>
+                    <div class="flex flex-col text-xs font-semibold pt-2">
+                        <p class="text-start truncate">Shingeki no Kyojin The Final Season</p>
+                        <p class="text-start text-zinc-400 flex items-center gap-2">85.41
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg>
+                          
+                        </p>
+                    </div>
+    
+                </button>
+                
+                <button data-kitsu="41982" class="anime snap-start rounded-lg p-2.5 w-[156px] xl:w-[225.5px] group">
+    
+                    <div class="rounded-lg h-48 w-[136px] xl:w-[205px] xl:h-60 shadow-md bg-cover group-hover:opacity-75" style="background-image: url(https://media.kitsu.io/anime/poster_images/41982/original.jpg)"></div>
+                    <div class="flex flex-col text-xs font-semibold pt-2">
+                        <p class="text-start truncate">Shingeki no Kyojin Season 3 Part 2</p>
+                        <p class="text-start text-zinc-400 flex items-center gap-2">84.85
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg>
+                          
+                        </p>
+                    </div>
+    
+                </button>
+                
+                <button data-kitsu="7442" class="anime snap-start rounded-lg p-2.5 w-[156px] xl:w-[225.5px] group">
+    
+                    <div class="rounded-lg h-48 w-[136px xl:w-[205px] xl:h-60] shadow-md bg-cove group-hover:opacity-75r" style="background-image: url(https://media.kitsu.io/anime/poster_images/7442/original.jpg)"></div>
+                    <div class="flex flex-col text-xs font-semibold pt-2">
+                        <p class="text-start truncate">Shingeki no Kyojin</p>
+                        <p class="text-start text-zinc-400 flex items-center gap-2">84.82
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg>
+                          
+                        </p>
+                    </div>
+    
+                </button>
+                
+                <button data-kitsu="13881" class="anime snap-start rounded-lg p-2.5 w-[156px] xl:w-[225.5px] group">
+    
+                    <div class="rounded-lg h-48 w-[136px] xl:w-[205px] xl:h-60 shadow-md bg-cover group-hover:opacity-75" style="background-image: url(https://media.kitsu.io/anime/poster_images/13881/original.jpg)"></div>
+                    <div class="flex flex-col text-xs font-semibold pt-2">
+                        <p class="text-start truncate">Boku no Hero Academia 3</p>
+                        <p class="text-start text-zinc-400 flex items-center gap-2">84.53
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg>
+                          
+                        </p>
+                    </div>
+    
+                </button>
+                
+                <button data-kitsu="12268" class="anime snap-start rounded-lg p-2.5 w-[156px] xl:w-[225.5px] group">
+    
+                    <div class="rounded-lg h-48 w-[136px] xl:w-[205px] xl:h-60 shadow-md bg-cover group-hover:opacity-75" style="background-image: url(https://media.kitsu.io/anime/poster_images/12268/original.jpg)"></div>
+                    <div class="flex flex-col text-xs font-semibold pt-2">
+                        <p class="text-start truncate">Boku no Hero Academia 2</p>
+                        <p class="text-start text-zinc-400 flex items-center gap-2">84.52
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg>
+                          
+                        </p>
+                    </div>
+    
+                </button>
+                
+                <button data-kitsu="11469" class="anime snap-start rounded-lg p-2.5 w-[156px] xl:w-[225.5px] group">
+    
+                    <div class="rounded-lg h-48 w-[136px] xl:w-[205px] xl:h-60 shadow-md bg-cover group-hover:opacity-75" style="background-image: url(https://media.kitsu.io/anime/poster_images/11469/original.png)"></div>
+                    <div class="flex flex-col text-xs font-semibold pt-2">
+                        <p class="text-start truncate">Boku no Hero Academia</p>
+                        <p class="text-start text-zinc-400 flex items-center gap-2">84.21
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg>
+                          
+                        </p>
+                    </div>
+    
+                </button>
+                
+                <button data-kitsu="13569" class="anime snap-start rounded-lg p-2.5 w-[156px] xl:w-[225.5px] group">
+    
+                    <div class="rounded-lg h-48 w-[136px] xl:w-[205px] xl:h-60 shadow-md bg-cover group-hover:opacity-75" style="background-image: url(https://media.kitsu.io/anime/poster_images/13569/original.jpg)"></div>
+                    <div class="flex flex-col text-xs font-semibold pt-2">
+                        <p class="text-start truncate">Shingeki no Kyojin Season 3</p>
+                        <p class="text-start text-zinc-400 flex items-center gap-2">84.18
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg>
+                          
+                        </p>
+                    </div>
+    
+                </button>
+                
+            </div>
+    
+          </div>
+        </section>
+    
+
+        <section id="second-section" class="pl-4 py-4 md:p-4">
+          <div class="flex flex-col gap-2">
+            <div class="p-2.5">
+              <h3 class="text-xl font-semibold">Trending</h3>
+              <!-- <p class="text-gray-400 text-sm font-semibold tracking-wider">From the latest release</p> -->
+            </div>
+  
+            <div class="grid grid-rows-2 grid-flow-col overflow-x-scroll scroll-smooth snap-x snap-mandatory scrollbar-hide">
+              
+              <button data-kitsu="43806" class="anime p-2.5 w-[93.5vw] lg:w-[35rem] text-start group rounded-lg snap-start">
+  
+                  <div class="rounded-lg h-28 flex gap-4 text-xs font-semibold">
+                    <div class="bg-cover w-20 h-full rounded-lg shadow-md group-hover:opacity-75" style="background-image: url(https://media.kitsu.io/anime/43806/poster_image/cefec27a530ff9faac1b2fc238acad13.jpg);"></div>
+                    <div class="flex flex-col gap-2 justify-center">
+                      <div>
+                        <p>Chainsaw Man</p>
+                        <p class="text-zinc-400">チェンソーマン
+                          <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg> -->
+                          
+                        </p>
+                      </div>
+                      
+                      <a href="" class="flex gap-2 border border-zinc-900 w-fit py-1 pl-2 pr-4 rounded-lg items-center text-sm group hover:text-zinc-50 hover:bg-zinc-900" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 rounded-full fill-zinc-900 group-hover:fill-zinc-50 flex p-1">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+                        </svg>
+                        trailer
+                      </a>
+  
+                    </div>
+                  </div>
+  
+              </button>
+              
+              <button data-kitsu="12" class="anime p-2.5 w-[93.5vw] lg:w-[35rem] text-start group rounded-lg snap-start">
+  
+                  <div class="rounded-lg h-28 flex gap-4 text-xs font-semibold">
+                    <div class="bg-cover w-20 h-full rounded-lg shadow group-hover:opacity-75-md" style="background-image: url(https://media.kitsu.io/anime/poster_images/12/original.png);"></div>
+                    <div class="flex flex-col gap-2 justify-center">
+                      <div>
+                        <p>One Piece</p>
+                        <p class="text-zinc-400">ONE PIECE
+                          <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg> -->
+                          
+                        </p>
+                      </div>
+                      
+                      <a href="" class="flex gap-2 border border-zinc-900 w-fit py-1 pl-2 pr-4 rounded-lg items-center text-sm group hover:text-zinc-50 hover:bg-zinc-900" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 rounded-full fill-zinc-900 group-hover:fill-zinc-50 flex p-1">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+                        </svg>
+                        trailer
+                      </a>
+  
+                    </div>
+                  </div>
+  
+              </button>
+              
+              <button data-kitsu="45398" class="anime p-2.5 w-[93.5vw] lg:w-[35rem] text-start group rounded-lg snap-start">
+  
+                  <div class="rounded-lg h-28 flex gap-4 text-xs font-semibold">
+                    <div class="bg-cover w-20 h-full rounded-lg shadow-md group-hover:opacity-75" style="background-image: url(https://media.kitsu.io/anime/45398/poster_image/cc0bbc0dd2a123fb79b041078fce6f89.jpg);"></div>
+                    <div class="flex flex-col gap-2 justify-center">
+                      <div>
+                        <p>SPY×FAMILY</p>
+                        <p class="text-zinc-400">SPY×FAMILY
+                          <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg> -->
+                          
+                        </p>
+                      </div>
+                      
+                      <a href="" class="flex gap-2 border border-zinc-900 w-fit py-1 pl-2 pr-4 rounded-lg items-center text-sm group hover:text-zinc-50 hover:bg-zinc-900" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 rounded-full fill-zinc-900 group-hover:fill-zinc-50 flex p-1">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+                        </svg>
+                        trailer
+                      </a>
+  
+                    </div>
+                  </div>
+  
+              </button>
+              
+              <button data-kitsu="44081" class="anime p-2.5 w-[93.5vw] lg:w-[35rem] text-start group rounded-lg snap-start">
+  
+                  <div class="rounded-lg h-28 flex gap-4 text-xs font-semibold">
+                    <div class="bg-cover w-20 h-full rounded-lg shadow-md group-hover:opacity-75" style="background-image: url(https://media.kitsu.io/anime/44081/poster_image/4b749200e30cbdb20ab4ef2c6961688b.jpg);"></div>
+                    <div class="flex flex-col gap-2 justify-center">
+                      <div>
+                        <p>Kimetsu no Yaiba: Yuukaku-hen</p>
+                        <p class="text-zinc-400">鬼滅の刃 遊郭編
+                          <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg> -->
+                          
+                        </p>
+                      </div>
+                      
+                      <a href="" class="flex gap-2 border border-zinc-900 w-fit py-1 pl-2 pr-4 rounded-lg items-center text-sm group hover:text-zinc-50 hover:bg-zinc-900" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 rounded-full fill-zinc-900 group-hover:fill-zinc-50 flex p-1">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+                        </svg>
+                        trailer
+                      </a>
+  
+                    </div>
+                  </div>
+  
+              </button>
+              
+              <button data-kitsu="42765" class="anime p-2.5 w-[93.5vw] lg:w-[35rem] text-start group rounded-lg snap-start">
+  
+                  <div class="rounded-lg h-28 flex gap-4 text-xs font-semibold">
+                    <div class="bg-cover w-20 h-full rounded-lg shadow-md group-hover:opacity-75" style="background-image: url(https://media.kitsu.io/anime/42765/poster_image/5f099d83883544fc6200be91706d70e0.jpg);"></div>
+                    <div class="flex flex-col gap-2 justify-center">
+                      <div>
+                        <p>Jujutsu Kaisen</p>
+                        <p class="text-zinc-400">呪術廻戦
+                          <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg> -->
+                          
+                        </p>
+                      </div>
+                      
+                      <a href="" class="flex gap-2 border border-zinc-900 w-fit py-1 pl-2 pr-4 rounded-lg items-center text-sm group hover:text-zinc-50 hover:bg-zinc-900" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 rounded-full fill-zinc-900 group-hover:fill-zinc-50 flex p-1">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+                        </svg>
+                        trailer
+                      </a>
+  
+                    </div>
+                  </div>
+  
+              </button>
+              
+              <button data-kitsu="41370" class="anime p-2.5 w-[93.5vw] lg:w-[35rem] text-start group rounded-lg snap-start">
+  
+                  <div class="rounded-lg h-28 flex gap-4 text-xs font-semibold">
+                    <div class="bg-cover w-20 h-full rounded-lg shadow-md group-hover:opacity-75" style="background-image: url(https://media.kitsu.io/anime/poster_images/41370/original.jpg);"></div>
+                    <div class="flex flex-col gap-2 justify-center">
+                      <div>
+                        <p>Kimetsu no Yaiba</p>
+                        <p class="text-zinc-400">鬼滅の刃
+                          <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg> -->
+                          
+                        </p>
+                      </div>
+                      
+                      <a href="" class="flex gap-2 border border-zinc-900 w-fit py-1 pl-2 pr-4 rounded-lg items-center text-sm group hover:text-zinc-50 hover:bg-zinc-900" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 rounded-full fill-zinc-900 group-hover:fill-zinc-50 flex p-1">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+                        </svg>
+                        trailer
+                      </a>
+  
+                    </div>
+                  </div>
+  
+              </button>
+              
+              <button data-kitsu="1555" class="anime p-2.5 w-[93.5vw] lg:w-[35rem] text-start group rounded-lg snap-start">
+  
+                  <div class="rounded-lg h-28 flex gap-4 text-xs font-semibold">
+                    <div class="bg-cover w-20 h-full rounded-lg shadow-m group-hover:opacity-75d" style="background-image: url(https://media.kitsu.io/anime/poster_images/1555/original.jpg);"></div>
+                    <div class="flex flex-col gap-2 justify-center">
+                      <div>
+                        <p>Naruto: Shippuuden</p>
+                        <p class="text-zinc-400">ナルト- 疾風伝
+                          <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg> -->
+                          
+                        </p>
+                      </div>
+                      
+                      <a href="" class="flex gap-2 border border-zinc-900 w-fit py-1 pl-2 pr-4 rounded-lg items-center text-sm group hover:text-zinc-50 hover:bg-zinc-900" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 rounded-full fill-zinc-900 group-hover:fill-zinc-50 flex p-1">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+                        </svg>
+                        trailer
+                      </a>
+  
+                    </div>
+                  </div>
+  
+              </button>
+              
+              <button data-kitsu="11469" class="anime p-2.5 w-[93.5vw] lg:w-[35rem] text-start group rounded-lg snap-start">
+  
+                  <div class="rounded-lg h-28 flex gap-4 text-xs font-semibold">
+                    <div class="bg-cover w-20 h-full rounded-lg shadow-md group-hover:opacity-75" style="background-image: url(https://media.kitsu.io/anime/poster_images/11469/original.png);"></div>
+                    <div class="flex flex-col gap-2 justify-center">
+                      <div>
+                        <p>Boku no Hero Academia</p>
+                        <p class="text-zinc-400">僕のヒーローアカデミア
+                          <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg> -->
+                          
+                        </p>
+                      </div>
+                      
+                      <a href="" class="flex gap-2 border border-zinc-900 w-fit py-1 pl-2 pr-4 rounded-lg items-center text-sm group hover:text-zinc-50 hover:bg-zinc-900" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 rounded-full fill-zinc-900 group-hover:fill-zinc-50 flex p-1">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+                        </svg>
+                        trailer
+                      </a>
+  
+                    </div>
+                  </div>
+  
+              </button>
+              
+              <button data-kitsu="6448" class="anime p-2.5 w-[93.5vw] lg:w-[35rem] text-start group rounded-lg snap-start">
+  
+                  <div class="rounded-lg h-28 flex gap-4 text-xs font-semibold">
+                    <div class="bg-cover w-20 h-full rounded-lg shadow-m group-hover:opacity-75d" style="background-image: url(https://media.kitsu.io/anime/poster_images/6448/original.png);"></div>
+                    <div class="flex flex-col gap-2 justify-center">
+                      <div>
+                        <p>Hunter x Hunter (2011)</p>
+                        <p class="text-zinc-400">HUNTER×HUNTER ハンターハンター
+                          <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg> -->
+                          
+                        </p>
+                      </div>
+                      
+                      <a href="" class="flex gap-2 border border-zinc-900 w-fit py-1 pl-2 pr-4 rounded-lg items-center text-sm group hover:text-zinc-50 hover:bg-zinc-900" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 rounded-full fill-zinc-900 group-hover:fill-zinc-50 flex p-1">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+                        </svg>
+                        trailer
+                      </a>
+  
+                    </div>
+                  </div>
+  
+              </button>
+              
+              <button data-kitsu="7442" class="anime p-2.5 w-[93.5vw] lg:w-[35rem] text-start group rounded-lg snap-start">
+  
+                  <div class="rounded-lg h-28 flex gap-4 text-xs font-semibold">
+                    <div class="bg-cover w-20 h-full rounded-lg shadow-m group-hover:opacity-75d" style="background-image: url(https://media.kitsu.io/anime/poster_images/7442/original.jpg);"></div>
+                    <div class="flex flex-col gap-2 justify-center">
+                      <div>
+                        <p>Shingeki no Kyojin</p>
+                        <p class="text-zinc-400">進撃の巨人
+                          <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3">
+                            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+                          </svg> -->
+                          
+                        </p>
+                      </div>
+                      
+                      <a href="" class="flex gap-2 border border-zinc-900 w-fit py-1 pl-2 pr-4 rounded-lg items-center text-sm group hover:text-zinc-50 hover:bg-zinc-900" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 rounded-full fill-zinc-900 group-hover:fill-zinc-50 flex p-1">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+                        </svg>
+                        trailer
+                      </a>
+  
+                    </div>
+                  </div>
+  
+              </button>
+              
+            </div>
+          </div>
+      </section>  
+        <!-- lg -->
+
+        <section class="px-4 pt-8 lg:pt-14">
+          <div class="flex items-center gap-3 py-2 px-2.5 lg:grid lg:grid-cols-6">
+            <!-- lg -->
+            <div class="shadow-lg rounded-lg w-24 h-32 bg-cover lg:order-last lg:col-span-1 lg:w-full lg:h-54" style="background-image: url(./nezuko.jpg);">
+            </div>
+
+            <div></div>
+            <!-- lg -->
+            <div class="font-medium flex flex-col gap-3 lg:col-span-4 lg:order-first">
+              <div class="lg:flex lg:flex-col lg:gap-3">
+
+                <!-- lgz -->
+                <p class="text-2xl font-semibold lg:text-6xl lg:text-zinc-800">Kimetsu no Yaiba: Yuukaku-hen
+
+                </p> 
+                <p class="text-xs tracking-wider text-zinc-400 lg:text-sm lg:p-1">2016</p>
+              </div>
+              <a href="" class="flex gap-2 border border-zinc-900 w-fit py-1 pl-2 pr-4 rounded-lg items-center text-sm group hover:text-zinc-50 hover:bg-zinc-800 transition duration-300" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 rounded-full fill-zinc-900 group-hover:fill-zinc-50 flex p-1">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+                </svg>
+                trailer
+              </a>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="py-4 pl-4 max-w-[50rem]">
+          <!-- ALL -->
+
+          <div class="">
+            <div class="py-4 flex flex-col lg:gap-3">
+              <h2 class="text-xl font-semibold p-2">About this anime</h2>
+              <div class="px-2">
+                <p class="font-medium text-sm text-zinc-400 break-words">Moments prior to Naruto Uzumaki's birth, a huge demon known as the Kyuubi, the Nine-Tailed Fox, attacked Konohagakure, the Hidden Leaf Village, and wreaked havoc. In order to put an end to the Kyuubi's rampage, the leader of the village, the Fourth Hokage, sacrificed his life and sealed the monstrous beast inside the newborn Naruto.\nNow, Naruto is a hyperactive and knuckle-headed ninja still living in Konohagakure. Shunned because of the Kyuubi inside him, Naruto struggles to find his place in the village, while his burning desire to become the Hokage of Konohagakure leads him not only to some great new friends, but also some deadly foes.\n[Written by MAL Rewrite]"</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="px-4 pb-6">
+          <div class="flex items-center">
+            <h2 class="text-xl font-semibold text-zinc-700 p-2">Rating and reviews</h2>
+            <a href="">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="flex items-center gap-3 p-2 se">
+            <div class="flex flex-col items-center gap-2">
+
+              <h1 class="text-5xl font-medium">
+                4.8
+              </h1>
+              <div class="flex gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-2.5 h-2.5 fill-zinc-900">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-2.5 h-2.5 fill-zinc-900">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-2.5 h-2.5 fill-zinc-900">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-2.5 h-2.5 fill-zinc-900">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-2.5 h-2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                </svg>
+                
+              </div>
+            </div>
+
+            <div></div>
+          </div>
+
+
+          <ul class="flex flex-col gap-4 py-4 lg:max-w-3xl">
+
+
+            <li class="flex flex-col gap-2 p-2">
+              <div class="flex items-center gap-3">
+                <div class="h-10 w-10 overflow-hidden rounded-full">
+                  <img src="./nezuko.jpg" alt="" class="bg-cover w-full h-full">
+                </div>
+                <p class="text-sm font-semibold">Ravaloarison Maminiaina</p>
+              </div>
+
+              <div>
+                <div class="flex items-center gap-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-2 h-2 fill-zinc-900">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                  </svg>      
+                  
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-2 h-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                  </svg> 
+
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-2 h-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                  </svg> 
+
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-2 h-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                  </svg> 
+
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-2 h-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                  </svg> 
+
+                  <p class="text-xs text-zinc-400 font-medium">November 26, 2022</p>
+                </div>
+              </div>
+
+              <div class="">
+                <p class="text-sm font-[450]">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde cum esse dolores pariatur autem ex. Nihil ex impedit necessitatibus vel. Minima beatae id quidem sint harum consectetur sequi cupiditate quia?
+                </p>
+              </div>
+
+            </li>
+
+            <li class="flex flex-col gap-2 p-2">
+              <div class="flex items-center gap-3">
+                <div class="h-10 w-10 overflow-hidden rounded-full">
+                  <img src="./nezuko.jpg" alt="" class="bg-cover w-full h-full">
+                </div>
+                <p class="text-sm font-semibold">Ravaloarison Maminiaina</p>
+              </div>
+
+              <div>
+                <div class="flex items-center gap-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-2 h-2 fill-zinc-900">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                  </svg>      
+                  
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-2 h-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                  </svg> 
+
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-2 h-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                  </svg> 
+
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-2 h-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                  </svg> 
+
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-2 h-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                  </svg> 
+
+                  <p class="text-xs text-zinc-400 font-medium">November 26, 2022</p>
+                </div>
+              </div>
+
+              <div class="">
+                <p class="text-sm font-[450]">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde cum esse dolores pariatur autem ex. Nihil ex impedit necessitatibus vel. Minima beatae id quidem sint harum consectetur sequi cupiditate quia?
+                </p>
+              </div>
+
+            </li>
+
+            <li class="flex flex-col gap-2 p-2">
+              <div class="flex items-center gap-3">
+                <div class="h-10 w-10 overflow-hidden rounded-full">
+                  <img src="./nezuko.jpg" alt="" class="bg-cover w-full h-full">
+                </div>
+                <p class="text-sm font-semibold">Ravaloarison Maminiaina</p>
+              </div>
+
+              <div>
+                <div class="flex items-center gap-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-2 h-2 fill-zinc-900">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                  </svg>      
+                  
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-2 h-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                  </svg> 
+
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-2 h-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                  </svg> 
+
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-2 h-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                  </svg> 
+
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-2 h-2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                  </svg> 
+
+                  <p class="text-xs text-zinc-400 font-medium">November 26, 2022</p>
+                </div>
+              </div>
+
+              <div class="">
+                <p class="text-sm font-[450]">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde cum esse dolores pariatur autem ex. Nihil ex impedit necessitatibus vel. Minima beatae id quidem sint harum consectetur sequi cupiditate quia?
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+
+          <div>
+            <div class="p-2">
+              <h2 class="text-xl font-semibold">Rate this anime</h2>
+              <p class="text-sm font-medium text-zinc-400">Tell us what you think</p>
+            </div>
+
+            <button id="review-btn" class="rounded-lg p-2">
+              <p class="p-2 border border-zinc-900 hover:bg-zinc-800 hover:text-zinc-50 transition duration-300 rounded-lg text-sm font-semibold">
+                Write review
+              </p>
+            </button>
+
+          </div>
+        </section>
+             
+      </main>
