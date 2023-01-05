@@ -164,6 +164,7 @@ def details(id):
             "review": myreview_db[0]["content"],
             "sender": user[0]["_name"],
             "sender_picture": user[0]["picture"],
+            "rate": myreview_db[0]["rate"],
             "posted_at": myreview_db[0]["posted_at"]
         })
 
@@ -228,13 +229,13 @@ def profile():
     return json.dumps(session.get("user"), indent=4)
 
 # review
-@app.route("/review")
+@app.route("/user_review")
 def review():
     if not session:
         return "Please try login first"
 
-    user_id = db.execute("SELECT id FROM userdb WHERE LOWER(_name) = ?", session.get("user"))
-    reviews = db.execute("SELECT * FROM review WHERE sender_id = ?" user_id["id"])
+    user_id = db.execute("SELECT id FROM userdb WHERE LOWER(_name) = ?", session.get("user")['userinfo']['name'].lower())
+    reviews = db.execute("SELECT * FROM review WHERE sender_id = ?", user_id[0]["id"])
 
     return {
         "reviews": reviews,
