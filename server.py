@@ -204,9 +204,10 @@ def send_review(anime_id):
 
 
     db.execute(
-        "INSERT INTO review (sender_id, anime_id, content, posted_at) VALUES (?,?,?,?)", 
+        "INSERT INTO review (sender_id, anime_id, rate, content, posted_at) VALUES (?,?,?,?,?)", 
         sender_id[0]['id'], 
         anime_id, 
+        request.form.get("rate"),
         review,
         datetime.now()
     )
@@ -217,6 +218,7 @@ def send_review(anime_id):
 
 
 # /** TODO **/
+# MY REVIEW
 # PROFILE
 @app.route("/profile")
 def profile():
@@ -225,6 +227,19 @@ def profile():
 
     return json.dumps(session.get("user"), indent=4)
 
+# review
+@app.route("/review")
+def review():
+    if not session:
+        return "Please try login first"
+
+    user_id = db.execute("SELECT id FROM userdb WHERE LOWER(_name) = ?", session.get("user"))
+    reviews = db.execute("SELECT * FROM review WHERE sender_id = ?" user_id["id"])
+
+    return {
+        "reviews": reviews,
+        "user": user_id
+    }
 
 @app.route("/callback", methods=["GET", "POST"])
 def callback():
