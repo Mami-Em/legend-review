@@ -213,7 +213,7 @@ def send_review(anime_id):
         datetime.now()
     )
 
-    flash("Review added!", "success")
+    flash("Review sent! Please refresh the page to see updates.", "success")
     return render_template("message.html")
 
 

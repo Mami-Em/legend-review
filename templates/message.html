@@ -1,9 +1,42 @@
 {% with messages = get_flashed_messages(with_categories=true) %}
     {% if messages %}
-    <ul class=flashes>
-        {% for category, message in messages %}
-        <li class="{{ category }}">{{ message }}</li>
-        {% endfor %}
+    {% for category, message in messages %}
+    {% if category == 'success' %}
+    <ul class="flashes p-2 bg-green-100 text-green-700 shadow-md max-w-lg mx-auto lg:rounded-b-lg">
+        <li class="p-2 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined">
+                  done
+                </span>
+                <p class="text-sm font-semibold">{{ message }}</p>
+            </div>
+
+            <button id="refresh-message">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                </svg>
+            </button>  
+        </li>
     </ul>
+    {% else %}
+    <ul class="flashes p-2 bg-red-100 text-red-700 shadow-md max-w-lg mx-auto lg:rounded-b-lg">
+        <li class="p-2 flex justify-between items-center ">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined">
+              warning
+            </span>
+            <p class="text-sm font-semibold">{{ message }}</p>
+          </div>
+
+          <button id="close-message">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>  
+          </button>
+          
+        </li>
+    </ul> 
+    {% endif %}
+    {% endfor %}
     {% endif %}
 {% endwith %}

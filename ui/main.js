@@ -126,3 +126,8 @@ function closeReviewSection() {
     reviewSection.classList.add("hidden");
   }, 200);
 };
+
+
+document.querySelector("#review-btn").addEventListener("click", () => {
+  document.querySelector("#messages").classList.remove("hidden")
+});

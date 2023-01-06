@@ -6,14 +6,116 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <title>Vite App</title>
   </head>
   <body class="text-zinc-900 font-quicksand bg-zinc-50">
 
+    <style>
+      /* show message */
+      .show-message {
+        animation: show-message .2s;
+      }
+
+      @keyframes show-message {
+        form {
+          top: -4rem;
+        }
+        to {
+          top: 0;
+        }
+      }
+
+      /* close message */
+      .close-message {
+        animation: close-message .2s;
+      }
+
+      @keyframes close-message {
+        from {
+          top: 0;
+        }
+        to {
+          top: -4rem;
+        }
+      }
+    </style>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const messages = document.querySelector("#messages");
+
+        // show message
+        document.querySelector("#review-btn").addEventListener("click", () => {
+          messages.classList.add("show-message");
+          messages.classList.remove("close-message");
+          setTimeout(() => {
+            messages.classList.remove("-top-16");
+          }, 100);
+        });
+
+        // closing btn on click
+        // document.querySelector("#close-message").addEventListener("click", closeMessages);
+
+        // refresh btn on click
+        document.querySelector("#refresh-message").addEventListener("click", closeMessages);
+        
+        // close message
+        function closeMessages() {
+          messages.classList.remove("show-message");
+          setTimeout(() => {
+            messages.classList.add("close-message");
+            messages.classList.add("-top-16");
+          }, 100);
+        };
+      });
+    </script>
+
+    <div id="messages" class="z-50 w-screen absolute -top-16">
+      <ul class="p-2 bg-green-100 text-green-700 shadow-md max-w-lg mx-auto lg:rounded-b-lg">
+        <li class="p-2 flex justify-between items-center">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined">
+              done
+            </span>
+            <p class="text-sm font-semibold">Review sent! Please refresh the page to see updates.</p>
+          </div>
+
+          <button id="refresh-message">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+            </svg>
+          </button>  
+        </li>
+      </ul>
+
+      <!-- <ul class="p-2 bg-red-100 text-red-700 shadow-md max-w-lg mx-auto lg:rounded-b-lg">
+        <li class="p-2 flex justify-between items-center ">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined">
+              warning
+            </span>
+            <p class="text-sm font-semibold">You already submitted a review</p>
+          </div>
+
+          <button id="close-message">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>  
+          </button>
+          
+        </li>
+      </ul> -->
+
+    </div>
+
+
     <section id="review-section" class="absolute ">
-      <div class="w-screen h-screen fixed z-50 backdrop-blur-sm py-4">
+      <div class="w-screen h-screen fixed z-40 backdrop-blur-sm py-4">
         <!-- -bottom-96 -->
-        <div id="review-sh" class="absolute left-1/2 -bottom-[] -translate-x-1/2 h-4/5 lg:max-h-md border rounded-lg bg-zinc-50 w-11/12 max-w-lg mx-auto">
+        <div id="review-sh" class="absolute left-1/2 -bottom-[] top-1/2 -translate-y-1/2 -translate-x-1/2 h-4/5 lg:max-h-md border rounded-lg bg-zinc-50 w-11/12 max-w-lg mx-auto">
           <div class="flex justify-between items-center px-6 py-4">
             <h2 class="text-xl font-semibold text-zinc-700">My Hero Academia</h2>
     
@@ -65,13 +167,14 @@
             </form>
     
           </div>
-    
+          <button class="border p-2" id="review-btn">review messages</button>
           
         </div>
       
       </div>
     </section>
     
-      <script type="module" src="./main.js"></script>
+    <script type="module" src="./main.js"></script>
+
   </body>
 </html>
