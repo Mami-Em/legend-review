@@ -5,12 +5,24 @@ document.querySelector("#review-form").addEventListener("submit", function(e) {
   e.preventDefault();
 
   let request = new XMLHttpRequest();
-
+  
   // response on load
   request.onload = () => {
     if (request.readyState == 4 && request.status == 200) {
-      document.querySelector("#messages").innerHTML = request.responseText;            
+      
+      document.querySelector("#messages-section").innerHTML = request.responseText;            
       closeReviewSection();
+      
+      const messages = document.querySelector("#messages");
+
+      // send tht message
+      document.querySelector("#messages-section").classList.remove("hidden");
+      console.log(document.querySelector("#messages-section"));
+      messages.classList.add("show-message");
+      messages.classList.remove("close-message");
+      setTimeout(() => {
+        messages.classList.remove("-top-16");
+      }, 100);
     }
   }
 
@@ -28,6 +40,7 @@ document.querySelector("#review-form").addEventListener("submit", function(e) {
   // send request
   request.send(review);
 });
+
 
 
 // review stars
@@ -70,4 +83,17 @@ function closeReviewSection() {
   setTimeout(() => {
     reviewSection.classList.add("hidden");
   }, 200);
+};
+
+
+// close message
+function closeMessages() {
+  messages.classList.remove("show-message");
+  setTimeout(() => {
+    messages.classList.add("close-message");
+  }, 100);
+  setTimeout(() => {
+    messages.classList.add("-top-16");
+    document.querySelector("#messages-section").classList.add("hidden");
+  }, 300);
 };

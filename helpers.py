@@ -26,7 +26,10 @@ def ratings(jsonRatings):
         ratingsPercent = (newRatings['5']*100)/ vote
 
     except:
-        return "None"
+        return {
+            'total_votes': 0,
+            'avg_vote': 0
+        }
 
     return {
         'total_votes': vote,

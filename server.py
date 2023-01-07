@@ -113,17 +113,10 @@ def details(id):
 
     data_attributes = anime_details['data']['attributes']
 
-    try:
-        ja_jp = data_attributes['titles']['ja_jp']
-
-    except:
-        ja_jp = 'None'
-
     details = {
         'launch date': d_format(data_attributes['createdAt']),
         'latest update': d_format(data_attributes['updatedAt']),
         'english title': data_attributes['canonicalTitle'],
-        'japanese title': ja_jp,
         'age rating guide': data_attributes['ageRatingGuide'],
         'episode length': data_attributes['episodeLength'],
         'rating and review': ratings(data_attributes['ratingFrequencies'])
@@ -200,7 +193,7 @@ def send_review(anime_id):
 
     # check if user already left a review
     if len(reviewDB) > 0:
-        flash("You left a comment already!")
+        flash("You already left a comment!")
         return render_template("message.html")
 
 

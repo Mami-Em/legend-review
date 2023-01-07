@@ -4,8 +4,6 @@
 {{ anime['data']['attributes']['titles']['en_jp'] }}
 {% endblock %}
 
-{% block body %}
-
 {% block additional %}
 <section id="review-section" class="absolute hidden">
     <div class="w-screen h-screen fixed z-50 backdrop-blur-sm py-4">
@@ -60,9 +58,12 @@
 </section>
 {% endblock %}
 
+{% block body %}
 
 
-<main class="max-w-xl mx-auto lg:max-w-6xl lg:py-12">
+
+
+<main class="max-w-xl mx-auto lg:max-w-6xl" id="main-details">
     <section class="px-4 pt-8 lg:pt-14">
         <div class="flex items-center gap-3 py-2 px-2.5 lg:grid lg:grid-cols-6">
           <div class="shadow-lg rounded-lg w-24 h-32 bg-cover lg:order-last lg:col-span-1 lg:w-full lg:h-54" style="background-image: url({{ anime['data']['attributes']['posterImage']['original'] }});">
