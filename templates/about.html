@@ -1,9 +1,112 @@
 {% extends 'layout.html' %}
 
+{% block main_header_content %}
+
+{% endblock %}
+
 {% block body %}
-<div class="grid px-4 h-96 bg-white place-content-center">
-    <h1 class="tracking-widest text-gray-500 uppercase">404 | Not Found</h1>
-</div>  
+<div class="bg-white py-24 sm:pb-32 lg:pb-40">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="sm:text-center sm:pb-10">
+        <h2 class="text-lg font-semibold leading-8 text-indigo-600">About</h2>
+        <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Overview</p>
+        <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">This project is an anime review website inspired by <a href="https://cs50.harvard.edu/x/2023/" target="_blank" class="text-indigo-500"> Harvard CS50 project</a>. Users can register and login with their Google account, search for any anime, see reviews and ratings made by others, and can leave one review per anime. See below the technologies used:</p>
+      </div>
+  
+      <div class="mt-20 max-w-lg sm:mx-auto md:max-w-none">
+        <div class="grid grid-cols-1 gap-y-16 md:grid-cols-2 md:gap-x-12 md:gap-y-16">
+          <div class="relative flex flex-col gap-6 sm:flex-row md:flex-col lg:flex-row">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500 text-white sm:shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+              </svg>
+              
+            </div>
+            <div class="sm:min-w-0 sm:flex-1">
+              <p class="text-lg font-semibold leading-8 text-gray-900">PostgreSQL</p>
+              <p class="mt-2 text-base leading-7 text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
+            </div>
+          </div>
+  
+          <div class="relative flex flex-col gap-6 sm:flex-row md:flex-col lg:flex-row">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500 text-white sm:shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" />
+              </svg>
+              
+            </div>
+            <div class="sm:min-w-0 sm:flex-1">
+              <p class="text-lg font-semibold leading-8 text-gray-900">Python and Flask</p>
+              <p class="mt-2 text-base leading-7 text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
+            </div>
+          </div>
+  
+          <div class="relative flex flex-col gap-6 sm:flex-row md:flex-col lg:flex-row">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500 text-white sm:shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
+              </svg>
+              
+            </div>
+            <div class="sm:min-w-0 sm:flex-1">
+              <p class="text-lg font-semibold leading-8 text-gray-900">Kitsu API</p>
+              <p class="mt-2 text-base leading-7 text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
+            </div>
+          </div>
+  
+          <div class="relative flex flex-col gap-6 sm:flex-row md:flex-col lg:flex-row">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500 text-white sm:shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33" />
+              </svg>
+              
+            </div>
+            <div class="sm:min-w-0 sm:flex-1">
+              <p class="text-lg font-semibold leading-8 text-gray-900">Auth0</p>
+              <p class="mt-2 text-base leading-7 text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
+            </div>
+          </div>
+
+
+          <div class="relative flex flex-col gap-6 sm:flex-row md:flex-col lg:flex-row">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500 text-white sm:shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 7.125C2.25 6.504 2.754 6 3.375 6h6c.621 0 1.125.504 1.125 1.125v3.75c0 .621-.504 1.125-1.125 1.125h-6a1.125 1.125 0 01-1.125-1.125v-3.75zM14.25 8.625c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v8.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-8.25zM3.75 16.125c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-2.25z" />
+              </svg>
+              
+            </div>
+            <div class="sm:min-w-0 sm:flex-1">
+              <p class="text-lg font-semibold leading-8 text-gray-900">Tailwind CSS and Vanilla Javascript</p>
+              <p class="mt-2 text-base leading-7 text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
+            </div>
+          </div>
+
+
+
+          <div class="relative flex flex-col gap-6 sm:flex-row md:flex-col lg:flex-row">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500 text-white sm:shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z" />
+              </svg>
+              
+            </div>
+            <div class="sm:min-w-0 sm:flex-1">
+              <p class="text-lg font-semibold leading-8 text-gray-900">Onrender and Railway</p>
+              <p class="mt-2 text-base leading-7 text-gray-600">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
+            </div>
+          </div>
+
+
+          
+          
+
+          
+          
+        </div>
+      </div>
+    </div>
+</div>
+  
 {% endblock %}
 
 {% block script %}
