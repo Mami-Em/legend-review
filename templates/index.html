@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+
+{% block main_header_content %}
+<main>
+  <div class="relative px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl pt-20 pb-10 sm:pt-32">
+      <div>
+          <div>
+              <h1 class="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">Welcome to anime review</h1>
+              <p class="mt-6 text-lg leading-8 text-gray-600 sm:text-center">Rate and add review to your favorite anime.</p>
+              <div class="mt-8 flex gap-x-4 sm:justify-center">
+                  <div class="sm:mb-8 sm:flex sm:justify-center">
+                      <div class="relative overflow-hidden rounded-lg py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                          <span class="text-gray-600">
+                              Built with Kitsu API, Auth0 and tailwindcss <a href="https://github.com/Mami-Em/legend-review" target="_blank" class="font-semibold text-indigo-600"><span class="absolute inset-0" aria-hidden="true"></span>Read more<span aria-hidden="true">&rarr;</span></a>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}
+
+{% block body %}
+<div class="bg-white">
+<div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+    <h2 class="sr-only">Products</h2>
+
+    <div class="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+    {% for item in trending['data'] %}
+    <a href="/details/{{ item['id'] }}" class="group">
+        <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 sm:h-80">
+        <img src="{{ item['attributes']['posterImage']['original'] }}" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-sm text-gray-700">
+            {{ item['attributes']['titles']['ja_jp'] }}
+        </h3>
+        <p class="mt-1 text-lg font-medium text-gray-900 flex items-center gap-2">
+            {% if item['attributes']['titles']['en'] | length > 0 %}
+            {{ item['attributes']['titles']['en'] }}
+            {% else %}
+            {{ item['attributes']['cannonicalTitle'] }}
+            {% endif %}
+        </p>
+    </a>  
+    {% endfor %}
+    <!-- List of anime... -->
+    </div>
+</div>
+</div>
+{% endblock %}
+
+{% block script %}
+{% endblock %}

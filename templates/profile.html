@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+{% if session %}
+<section class="bg-white dark:bg-gray-900">
+    <div class="container flex flex-col items-center px-4 py-12 mx-auto text-center">
+        <img src="{{ session.userinfo.picture }}" alt="" class="w-42 rounded-full">
+        <h2 class="max-w-2xl mt-6 mx-auto text-3xl font-semibold tracking-tight text-gray-800 xl:text-4xl dark:text-white">
+            You are logged in as <span class="text-indigo-500">{{ session.userinfo.name }}</span>
+        </h2>
+
+        <p class="max-w-4xl mt-6 text-center text-gray-500 dark:text-gray-300">
+            Thank you for showing support by using my app.
+        </p>
+
+        <div class="inline-flex w-full mt-6 sm:w-auto">
+            <button type="button" onclick="logout()" class="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:text-sm">Log out</button>
+        </div>
+    </div>
+</section>
+{% else %}
+<div class="grid px-4 h-4/5 bg-white place-content-center">
+    <h1 class="tracking-widest text-gray-500 uppercase">404 | Not Found</h1>
+</div> 
+{% endif %}
+
+{% endblock %}
+
+
+{% block script %}
+<script>
+    function logout() {
+        location.href = "/logout";
+    }
+</script>
+{% endblock %}

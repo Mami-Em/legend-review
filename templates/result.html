@@ -1,0 +1,31 @@
+{% for item in anime['data'] %}
+<li class="flex py-6">
+    <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+      <img src="{{ item['attributes']['posterImage']['original'] }}" alt="" class="h-full w-full object-cover object-center">
+    </div>
+
+    <div class="ml-4 flex flex-1 flex-col">
+      <div>
+        <div class="flex justify-between text-base font-medium text-gray-900">
+          <h3>
+            <a href="/details/{{ item['id'] }}">
+                {% if item['attributes']['titles']['en'] | length > 0 %}
+                {{ item['attributes']['titles']['en'] }}
+                {% else %}
+                {{ item['attributes']['canonicalTitle'] }}
+                {% endif %}
+            </a>
+          </h3>
+        </div>
+        <p class="mt-1 text-sm text-gray-500">
+            {% if item['attributes']['titles']['ja_jp'] | length > 0 %}
+            {{ item['attributes']['titles']['ja_jp'] }}
+            {% endif %}
+        </p>
+      </div>
+      <div class="flex flex-1 items-end justify-between text-sm">
+        <p class="text-gray-500">{{ item['attributes']['subtype'] }}</p>
+      </div>
+    </div>
+</li>
+{% endfor %}

@@ -2,227 +2,281 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='logo.svg')}}" />
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='Vector.svg') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-
-    <!-- google icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
-    <title>{% block title %}{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Anime review</title>
 </head>
-<body class="text-zinc-900 font-quicksand bg-zinc-50">
+<body>
 
-    <div id="messages-section" class="absolute hidden"></div>
-    
-    {% block additional %}
-    {% endblock %}
-
-
-    <section id="menu-section" class="absolute hidden">
-        <div class="w-screen h-screen fixed z-50 backdrop-blur-sm">
-          <div id="menu" class="border-r rounded-r-xl max-w-xs w-3/5 h-full shadow-xl bg-zinc-50 overflow-hidden absolute left-[-300px]">
-  
-            <!-- section 1 -->
-            <div class="flex justify-between items-center px-6 py-4">
-              <button class="flex gap-2 items-center text-zinc-500 font-bold">
-                <img src="{{ url_for('static', filename='logo.svg') }}" class="w-8" alt="">
-                  
-                  
-                  
-                <p>Anime review</p>
-              </button>
-  
-             
-              <button id="hide-menu-btn" class="rounded-full bg-zinc-100 p-2 hover:bg-zinc-200 transition duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-  
-            <!-- section 2 -->
-            <div class="px-2">
-  
-              <div class="py-4 w-full font-bold text-sm">
-                
-                <a href="/" class="group">
-                  <div class="rounded-lg p-2 px-4 grid grid-cols-5 items-center group-hover:bg-zinc-100">
-                    
-                    <span class="material-symbols-outlined">
-                      home
-                    </span>                
-                    
-                    <p class="col-span-4">Home</p>
-                  </div>
-                  
-                </a>
-
-                {% if session %}
-                
-                <a href="/user_review" class="group">
-                  <div class="rounded-lg p-2 px-4 grid grid-cols-5 items-center group-hover:bg-zinc-100">
-                    <span class="material-symbols-outlined">
-                      drive_file_rename_outline
-                    </span>
-                    
-                    <p class="col-span-4">My Reviews</p>
-                    
-                  </div>
-                </a>
-  
-  
-                <a href="/profile" class="group">
-                  <div class="rounded-lg p-2 px-4 grid grid-cols-5 items-center group-hover:bg-zinc-100">
-                    <span class="material-symbols-outlined">
-                      person
-                    </span>
-                    
-                    <p class="col-span-4">Profile</p>
-                  </div>
-                </a>
-
-                {% endif %}                
-
-                
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          {% if category == 'Success' %}
+          <div id="message" class="bg-indigo-600 sticky top-0 z-50 invisible">
+            <div class="mx-auto max-w-7xl py-3 px-3 sm:px-6 lg:px-8">
+              <div class="flex flex-wrap items-center justify-between">
+                <div class="flex w-0 flex-1 items-center">
+                  <span class="flex rounded-lg bg-indigo-800 p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                      
+                  </span>
+                  <p class="ml-3 truncate tracking-wide font-medium text-white">
+                    <span class="md:hidden">{{ category }}</span>
+                    <span class="hidden md:inline">{{ message }}</span>
+                  </p>
+                </div>
+                <div class="order-3 mt-2 w-full flex-shrink-0 sm:order-2 sm:mt-0 sm:w-auto">
+                  <a href="#" class="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-2 text-sm font-medium text-indigo-600 shadow-sm hover:bg-indigo-50">Refresh<span class="md:hidden pl-1"> to see update</span></a>
+                </div>
+                <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
+                  <button type="button" class="-mr-1 flex rounded-md p-2 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2">
+                    <span class="sr-only">Dismiss</span>
+                    <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
               </div>
-
-
-              {% if session %}
-              
-              <a href="/logout" class="group absolute bottom-0 py-4">
-                <div class="rounded-lg p-2 px-4 flex gap-2 items-center group-hover:bg-zinc-100">
-                  <span class="material-symbols-outlined group-hover:scale-[1.03] transition duration-100 ease-in-out">
-                    logout
-                  </span>
-  
-                  <p class="col-span-4 text-sm font-semibold">Logout</p>
-                </div>
-  
-              </a>
-
-              {% else %}
-
-              <a href="/login" class="group absolute bottom-0 py-4">
-                <div class="rounded-lg p-2 px-4 flex gap-2 items-center group-hover:bg-zinc-100">
-                  <span class="material-symbols-outlined group-hover:scale-[1.03] transition duration-100 ease-in-out">
-                    login
-                  </span>
-  
-                  <p class="col-span-4 text-sm font-semibold">Login | Register</p>
-                </div>
-  
-              </a>
-
-              {% endif %}
             </div>
-            
+          </div>
+          {% else %}
+
+          <div id="message" class="bg-red-600 sticky top-0 z-50 invisible">
+            <div class="mx-auto max-w-7xl py-3 px-3 sm:px-6 lg:px-8">
+              <div class="flex flex-wrap items-center justify-between">
+                <div class="flex w-0 flex-1 items-center">
+                  <span class="flex rounded-lg bg-red-800 p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+                    </svg>
+                      
+                  </span>
+                  <p class="ml-3 truncate tracking-wide font-medium text-white">
+                    <span class="md:hidden">{{ category }}</span>
+                    <span class="hidden md:inline">{{ message }}</span>
+                  </p>
+                </div>
+                <div class="order-3 mt-2 w-full flex-shrink-0 sm:order-2 sm:mt-0 sm:w-auto">
+                  <a href="#" class="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-2 text-sm font-medium text-red-600 shadow-sm hover:bg-red-50">Refresh<span class="md:hidden pl-1"> to see update</span></a>
+                </div>
+                <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
+                  <button type="button" class="-mr-1 flex rounded-md p-2 hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2">
+                    <span class="sr-only">Dismiss</span>
+                    <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    
+
+    <header class="isolate bg-white">
+    
+        <div class="px-6 pt-6 lg:px-8">
+          <div>
+            <nav class="flex h-9 items-center justify-between" aria-label="Global">
+              <div class="flex lg:min-w-0 lg:flex-1" aria-label="Global">
+                <a href="/" class="-m-1.5 p-1.5">
+                  <span class="sr-only">Your Company</span>
+                  <img class="h-8" src="{{ url_for('static', filename='Vector.svg') }}" alt="">
+                </a>
+              </div>
+              <div class="flex gap-2 lg:hidden">
+                <button type="button" id="open-mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                  <span class="sr-only">Open main menu</span>
+                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+                </button>
+              </div>
+              <div class="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-center lg:gap-x-12">
+                <a href="/" class="font-semibold text-gray-900 hover:text-gray-400">Home</a>
+
+                <a href="/about" class="font-semibold text-gray-900 hover:text-gray-400">About</a>
+                
+                {% if session %}
+                <a href="/profile" class="font-semibold text-gray-900 hover:text-gray-400">Profile</a>
+                {% else %}
+                <p class="font-semibold text-gray-900 line-through">Profile</p>
+                {% endif %}
+                
+                <p onclick="toggleSearchSection()" class="font-semibold text-gray-900 hover:text-gray-900 hover:cursor-pointer">Search</p>
+    
+              </div>
+              <!-- SEARCH BTN -->
+              <div class="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
+                {% if session %}
+                <a href="/logout" class="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-indigo-500 shadow-sm ring-1 ring-indigo-500/10 hover:ring-indigo-500/20">Log out</a>
+                {% else %}
+                <a href="/login" class="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-indigo-500 shadow-sm ring-1 ring-indigo-500/10 hover:ring-indigo-500/20">Log in</a>
+                {% endif %}
+              </div>
+            </nav>
+            <!-- Mobile menu, show/hide. -->
+            <div role="dialog" aria-modal="true">
+              <div id="menu-hs" focus="true" class="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 hidden">
+                <div class="flex h-9 items-center justify-between">
+                  <div class="flex">
+                    <a href="/" class="-m-1.5 p-1.5">
+                      <span class="sr-only">Your Company</span>
+                      <img class="h-8" src="{{ url_for('static', filename='Vector.svg') }}" alt="">
+                    </a>
+                  </div>
+                  <div class="flex">
+                    <button type="button" id="close-mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                      <span class="sr-only">Close menu</span>
+                      <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="mt-6 flow-root">
+                  <div class="-my-6 divide-y divide-gray-500/10">
+                    <div class="space-y-2 py-6">
+                      <a href="/" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Home</a>
+                        
+                      <a href="/about" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">About</a>
+                      
+                      {% if session %}
+                      <a href="/profile" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10">Profile</a>
+                      {% else %}
+                      <p class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 line-through">Profile</p>
+                      {% endif %}
+
+                      <p onclick="toggleSearchSection()" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10 hover:cursor-pointer">Search</p>
+    
+                    </div>
+                    <div class="py-6">
+                      {% if session %}
+                      <a href="/logout" class="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10">Log out</a>
+                      {% else %}
+                      <a href="/login" class="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10">Log in</a>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-    </section> 
 
-    <section id="search-section" class="absolute hidden">
-
-        <div class="w-screen h-screen fixed bottom-0 z-50 backdrop-blur-sm p-4">
-          <div id="search-bar" class="relative border max-w-md mx-auto lg:max-w-2xl top-[-60px] rounded-lg p-2 pr-3 bg-zinc-50 grid grid-cols-12 content-center items-center">
-
-            <div class="flex justify-center items-center text-zinc-600">
-              <span class="material-symbols-rounded">
-                search
-              </span>
-            </div>
-
-            <input type="text" placeholder="Search" name="search" id="search" autocomplete="off" class="p-1 bg-zinc-50 w-full font-medium outline-none col-span-10">
-            
-            <div class="flex justify-center items-center text-zinc-600">
-              <button id="close-search" class="rounded-full bg-zinc-100 p-2 hover:bg-zinc-200 transition duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          <div id="result-section" class="py-4 max-w-md mx-auto lg:max-w-2xl hidden">
-            <div id="search-result" class="max-h-96 rounded-t-lg bg-zinc-50 overflow-y-scroll scroll-smooth scrollbar-hide relative border p-2 grid grid-cols-3">
-            </div>
-
-            <div class="border-x border-b bg-zinc-100 py-2 px-4 text-xs font-bold rounded-b-lg text-zinc-400 w-full">
-              Found {{ show | length }}
-            </div>
-          </div>
         
-        </div>
-
-
-
-    </section>
-
-    <header class="flex justify-between items-center px-4 sticky top-0 shadow-md bg-zinc-50">
-        <div class="lg:hidden">
-          <button id="menu-btn" class="material-symbols-rounded rounded-full w-10 h-10 flex justify-center items-center hover:bg-zinc-200">
-            menu
-          </button>
-        </div>
-
-        <div class="flex items-center gap-2">
-          <a href="/" class="lg:flex items-center justify-center gap-2">
-            <img src="{{ url_for('static', filename='logo.svg') }}" class="w-8 lg:w-12 py-2"/>
-            <p class="font-semibold text-xl text-zinc-400 hidden lg:flex px-2">Anime review</p>
-          </a>
-  
-          <div class="font-semibold lg:flex gap-6 p-4 hidden text-sm">
-            {% if session %}
-            <a class="hover:opacity-50 transition duration-300" href="/">Home</a>
-            <a class="hover:opacity-50 transition duration-300" href="/user_review">My reviews</a>
-            <a class="hover:opacity-50 transition duration-300" href="/profile">Profile</a>
-            <a class="hover:opacity-50 transition duration-300" href="/logout">Logout</a>
-            {% else %}
-            <a class="hover:opacity-50 transition duration-300" href="/login">register</a>
-            <a class="hover:opacity-50 transition duration-300" href="/login">login</a>
-            {% endif %}
-          </div>
-        </div>
-
-        <div class="flex justify-between items-center gap-2">
-          <button id="search-btn" class="material-symbols-rounded rounded-full w-11 h-11 hover:bg-zinc-200 ">
-            search
-          </button>
-        </div>
+        {% block main_header_content %}
+        {% endblock %}
     </header>
 
-    {% block body %}{% endblock %}
 
-    <footer class="lg:max-w-6xl max-w-xl mx-auto">
-      <div class="border-t p-4 lg:grid lg:grid-rows-2">
-        <div class="font-semibold p-2.5">
-          Explore a collection of anime and share your thoughts among other anime fans.
-        </div>
+    <!-- search -->
+    <div id="search-section" class="relative z-30" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+      <div id="slideover-bg" onclick="toggleSearchSection()" class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity opacity-0 invisible"></div>
+    
+      <div class="">
+        <div class="absolute inset-0 overflow-hidden">
+          <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
 
-        <div class="m-2.5 pb-4 text-sm text-zinc-400 font-bold grid grid-cols-2 gap-2 border-b lg:border-none">
-          <a href="https://github.com/Mami-Em/legend-review" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3 h-3">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
-            </svg>
-            
-            Github</a>
-        </div>
-
-        <div class="text-xs text-zinc-400 font-semibold p-2.5">
-          <p>© 2022 Anime review by <span class="font-bold" style="color: rgb(99 102 241);">
-            <a href="">Mami</a>
-          </span></p>
+            <div id="slideover" class="pointer-events-auto w-screen max-w-md translate-x-full transform transition ease-in-out duration-500 sm:duration-700">
+              <div class="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
+                <div class="flex-1 overflow-y-auto py-6 px-4 sm:px-6">
+                  <div class="flex items-start justify-between">
+                    <h2 class="text-lg font-medium text-gray-900" id="slide-over-title">Look for your Anime</h2>
+                    <div class="ml-3 flex h-7 items-center">
+                      <button type="button" onclick="toggleSearchSection()" class="-m-2 p-2 text-gray-400 hover:text-gray-500">
+                        <span class="sr-only">Close panel</span>
+                        <!-- Heroicon name: outline/x-mark -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+  
+                  <div class="mt-8">
+                    <label for="search" class="sr-only">Search</label>
+                    <input id="search" name="anime" type="text" autocomplete="off" class="relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="anime title">
+                  </div>
+    
+                  <div class="mt-8">
+                    <div class="flow-root">
+                      <ul id="search-result" role="list" class="-my-6 divide-y divide-gray-200">
+                        
+                        <!-- Search for anime... -->
+    
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+    
+                
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </div>   
+    {% block body %}
+    {% endblock %}
+    
+    <footer>
+
+        <div class="text-sm text-gray-600 mx-auto max-w-2xl pb-8 px-4 sm:pb-16 sm:px-6 lg:max-w-7xl lg:px-8 lg:text-center">
+            <p>© Anime review by 
+                <span class="font-semibold">
+                    <a href="https://github.com/Mami-Em">Mami</a>
+                </span>
+            </p>
+        </div>
+    
     </footer>
 
-    {% block link %}{% endblock %}
-    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
-    
+    {% block script %}
+    {% endblock %}
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+  
+        // search
+        const input = document.querySelector("#search");
+        input.addEventListener("input", async function() {
+          let response = await fetch('/search?q=' + input.value);
+          let shows = await response.text();
+          document.querySelector("#search-result").innerHTML = shows;
+        });
+      })
+    </script>
+
+    <script>
+      // search toggle
+      function toggleSearchSection() {
+        document.getElementById("slideover-bg").classList.toggle("invisible");
+        document.getElementById('slideover-bg').classList.toggle('opacity-0');
+        document.getElementById('slideover-bg').classList.toggle('opacity-50');
+        document.getElementById('slideover').classList.toggle('translate-x-full');
+        document.getElementById('slideover').classList.toggle('translate-x-0');
+      }
+      document.addEventListener("DOMContentLoaded", () => {
+          // open mobile menu
+          document.querySelector("#open-mobile-menu").addEventListener("click", () => {
+            document.querySelector("#menu-hs").classList.remove("hidden");
+          });
+  
+          // close modile menu
+          document.querySelector("#close-mobile-menu").addEventListener("click", () => {
+            document.querySelector("#menu-hs").classList.add("hidden");
+          });
+      });
+    </script>
+
 </body>
 </html>

@@ -1,232 +1,225 @@
 {% extends 'layout.html' %}
 
-{% block title %}
-{{ anime['data']['attributes']['titles']['en_jp'] }}
-{% endblock %}
+{% block main_header_content %}
 
-{% block additional %}
-<section id="review-section" class="absolute hidden">
-    <div class="w-screen h-screen fixed z-50 backdrop-blur-sm py-4">
-      <!-- -bottom-96 -->
-      <div id="review-sh" class="absolute left-1/2 -bottom-[50rem] -translate-x-1/2 h-4/5 border rounded-lg bg-zinc-50 w-11/12 max-w-lg mx-auto">
-        <div class="flex justify-between items-center px-6 py-4">
-          <h2 class="text-xl font-semibold text-zinc-700">{{ details['english title'] }}</h2>
-
-          <button id="close-review-section" class="rounded-full bg-zinc-100 p-2 hover:bg-zinc-200 transition duration-300">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-
-        <div class="px-6 flex flex-col gap-3">
-          <p class="font-medium">Reviews are public and include your account info</p>
-          <p class="text-zinc-400 font-medium text-sm tracking-wide">
-            Everyone can see your Account name and photo associated with your review.
-          </p>
-        </div>
-
-
-        <div class="p-6 flex flex-col gap-6">
-
-          <div class="grid grid-cols-5">
-            
-            {% for i in range(5) %}
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 hover:scale-110 transition duration-300 hover:cursor-pointer review-stars" data-rate="{{ i+1 }}">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
-            </svg>
-            {% endfor %}
-                                                           
-          </div>
-
-          <form id="review-form" name="sendReview">
-            <input type="text" id="anime-id" value="{{ anime['data']['id'] }}" class="hidden">
-            <textarea name="review" id="review" class="rounded-lg bg-zinc-50 border border-zinc-300 w-full h-44 outline-none p-4 text-sm" placeholder="Share your experience"></textarea>
-            <div class="absolute bottom-0 right-0 p-6">
-              <button class="border border-zinc-900 hover:bg-zinc-800 hover:text-zinc-50 transition duration-300 px-6 py-2 rounded-lg text-sm font-medium" type="submit">
-                Submit
-              </button>
-            </div>
-          </form>
-
-        </div>
-
-        
-      </div>
-    
-    </div>
-</section>
 {% endblock %}
 
 {% block body %}
+<main class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+<section>
+  <div class="mx-auto">
+    <div class="flex flex-wrap lg:grid lg:grid-cols-5 lg:items-center w-full">
+      <div class="col-span-3">
+        <div class="mt-10 lg:mt-0">
+          <span class="text-primary mb-2 block text-lg font-semibold">
+            {{ anime['data']['attributes']['subtype'] }}
+          </span>
+          <h2 class="text-dark mb-8 text-3xl font-bold sm:text-4xl">
+            {{ anime['data']['attributes']['canonicalTitle'] }}
+          </h2>
+          <p class="text-body-color mb-8 text-base">
+            {{ anime['data']['attributes']['synopsis'] }}
+          </p>
+        </div>
+      </div>
+      <div></div>
+      <div class="overflow-hidden col-span-1 w-60 mx-auto md:mx-0 md:w-auto lg:pl-4 order-first lg:order-last">
+        <img src="{{ anime['data']['attributes']['posterImage']['original'] }}" alt="" class="rounded-lg w-full bg-cover bg-center">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ====== About Section End -->
 
 
+<div class="mx-auto max-w-2xl pt-12 lg:pt-24  lg:max-w-7xl ">
+  <div class="md:grid md:grid-cols-1 md:gap-16 lg:grid-cols-3">
 
 
-<main class="max-w-xl mx-auto lg:max-w-6xl" id="main-details">
-    <section class="px-4 pt-8 lg:pt-14">
-        <div class="flex items-center gap-3 py-2 px-2.5 lg:grid lg:grid-cols-6">
-          <div class="shadow-lg rounded-lg w-24 h-32 bg-cover lg:order-last lg:col-span-1 lg:w-full lg:h-54" style="background-image: url({{ anime['data']['attributes']['posterImage']['original'] }});">
+    <div class="md:col-span-1">
+
+
+      <div class="px-0 pb-4">
+        <h3 class="text-2xl font-bold leading-6 text-gray-900 pb-4">Reviews</h3>
+
+        <div class="my-1 flex items-end gap-2 pb-4">
+          <div class="flex md:gap-4 lg:gap-0">
+            {% for i in range(total_avg) %}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 md:w-8 md:h-8 lg:w-6 lg:h-6 text-yellow-400">
+              <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+            </svg>            
+            {% endfor %}
+            {% for i in range(5 - total_avg) %}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 md:w-8 md:h-8 lg:w-6 lg:h-6 text-gray-300">
+              <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+            </svg>            
+            {% endfor %}
           </div>
 
-          <div></div>
-          <div class="font-medium flex flex-col gap-3 lg:col-span-4 lg:order-first" id="details-title">
-            <div class="lg:flex lg:flex-col lg:gap-3">
-              <p class="text-2xl font-semibold lg:text-6xl lg:text-zinc-800">{{ details['english title'] }}</p> 
-              <p class="text-xs tracking-wider text-zinc-400 lg:text-sm lg:p-1">{{ details['launch date'] }}</p>
+          {% if not anime['data']['attributes']['userCount'] == 0 %}
+          <p class="text-sm text-gray-600">
+            Based on {{ anime['data']['attributes']['userCount'] }} reviews
+          </p>
+          {% endif %}
+          
+        </div>
+        
+        <div class="flex flex-col justify-center gap-4 w-full">
+          {% for i in range(5) %}
+          <div class="grid grid-cols-10 items-center gap-2">
+            <div class="col-span-1 grid grid-cols-2 items-center">
+              <p class="text-sm">{{ 5 - i }}</p>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 text-yellow-400">
+                <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+              </svg>  
             </div>
-            <a href="https://www.youtube.com/embed/{{ anime['data']['attributes']['youtubeVideoId'] }}?enablejsapi=1&wmode=opaque&autoplay=1" 
-                class="flex gap-2 border border-zinc-900 w-fit py-1 pl-2 pr-4 rounded-lg items-center text-sm group hover:text-zinc-50 hover:bg-zinc-800 transition duration-300" target="_blank" rel="noopener noreferrer">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 rounded-full fill-zinc-900 group-hover:fill-zinc-50 flex p-1">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
-              </svg>
-              trailer
-            </a>
+
+            <div class="relative z-10 col-span-8 border border-gray-300 rounded-full h-3 bg-gray-50">
+              <div class="absolute z-20 h-full bg-yellow-400 border-yellow-400 rounded-full" style="width: {{ rating[i][ (5-i) | string ] }}%;"></div>
+            </div>
+
+            <div class="col-span-1 text-sm text-gray-500">{{ rating[i][ (5 - i) | string ] }}%</div>
           </div>
-
+          {% endfor %}
         </div>
-    </section>
 
-    <section class="py-4 pl-4 max-w-[50rem]">
 
-        <div class="">
-          <div class="py-4 flex flex-col lg:gap-3">
-            <h2 class="text-xl font-semibold p-2">About this anime</h2>
+      </div>
 
-            <div class="px-2">
-                <p class="font-medium text-sm text-zinc-400 break-words">{{ anime['data']['attributes']['synopsis'] }}</p>
+      <!-- review btn -->
+      <div class="px-0 pb-4">
+        <p>Tell us what you think</p>
+        <p class="text-sm text-gray-600">If you have watched this anime, share your experience with other anime lovers.</p>
+      </div>
+
+      <div class="px-0 pt-3">
+        <button type="button" onclick="toggleReviewSection()" class="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:text-sm">Write reviews</button>
+      </div>
+
+
+    </div>
+
+    <!-- reviews -->
+    <div class="mt-5 md:col-span-2 md:mt-0">
+
+      {% for item in review %}
+      <!-- profile/review -->
+      <div class="flex flex-col space-y-6 bg-white px-0 py-5 xl:pl-20 sm:pt-0 sm:pb-16">
+        <!-- profile -->
+        <div class="flex gap-3">
+          <div class="rounded-full overflow-hidden w-12 h-12">
+            <img src="{{ item['avatar'] }}" alt="" class="w-full h-full bg-cover bg-center">
+          </div>
+          <!-- name and star -->
+          <div class="flex flex-col gap-1">
+            <p class="font-bold text-sm">{{ item['username'] }}</p>
+            <div class="flex">
+              {% for i in range(item['rate']) %}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-yellow-400">
+                <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+              </svg>            
+              {% endfor %}
+              {% for i in range(5 - item['rate']) %}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-gray-300">
+                <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+              </svg>            
+              {% endfor %}
             </div>
           </div>
+          <!-- end name -->
         </div>
-
-    </section>
-
-    <section class="px-4 pb-6">
-        <div class="flex items-center">
-          <h2 class="text-xl font-semibold text-zinc-700 p-2">Rating and reviews</h2>
-          <a href="">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
-            </svg>
-          </a>
+        <div>
+          <p class="italic text-gray-500 tracking-wide">
+            {{ item['review'] }}
+          </p>
         </div>
+        <!-- end profile -->
+      </div>
+      <!-- end profile/review -->
+      {% endfor %}
+       
+    </div>
 
 
-        <div class="flex items-center gap-3 p-2">
-            <div class="flex flex-col items-center gap-2">
+  </div>
+</div>
 
-              <h1 class="text-5xl font-medium">
-                {{ '%0.1f' | format(details['rating and review']['avg_vote']|float) }}
-              </h1>
-              <div class="grid grid-cols-5 w-full">
-                {% for i in range(details['rating and review']['avg_vote']|float|int) %}
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 fill-zinc-900 p-1">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
-                </svg>
-                {% endfor %}
+</main>
 
-                {% for i in range(5 - details['rating and review']['avg_vote']|float|int) %}
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 p-1">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
-                </svg>
-                {% endfor %}
+
+<div id="review-section" class="relative z-30 invisible" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+  <!--
+    Background backdrop, show/hide based on modal state.
+
+    Entering: "ease-out duration-300"
+      From: "opacity-0"
+      To: "opacity-100"
+    Leaving: "ease-in duration-200"
+      From: "opacity-100"
+      To: "opacity-0"
+  -->
+  <div id="review-modal-bg" onclick="toggleReviewSection()" class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity opacity-0"></div>
+
+  <div class="fixed inset-0 z-10 overflow-y-auto">
+    <div class="flex min-h-full items-end justify-center text-center sm:items-center">
+      <!--
+        Modal panel, show/hide based on modal state.
+
+        Entering: "ease-out duration-300"
+          From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+          To: "opacity-100 translate-y-0 sm:scale-100"
+        Leaving: "ease-in duration-200"
+          From: "opacity-100 translate-y-0 sm:scale-100"
+          To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+      -->
+      <form id="review-modal" class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 w-full sm:max-w-lg opacity-0">
+        <div class="px-4 py-5 sm:px-6">
+          <h3 class="text-lg font-medium leading-6 text-gray-900">
+            {% if anime['data']['attributes']['titles']['en'] | length > 0 %}
+            {{ anime['data']['attributes']['titles']['en'] }}
+            {% else %}
+            {{ anime['data']['attributes']['canonicalTitle'] }}
+            {% endif %}
+          </h3>
+          <p class="mt-2 max-w-2xl text-sm font-medium text-gray-500">Reviews are public and include your account info.</p>
+          <p class="mt-1 max-w-2xl text-sm text-gray-500">Everyone can see your Account name and photo associated with your review.</p>
+        </div>
+        <div class="px-4 sm:px-6 grid grid-cols-5">
+          {% for i in range(5) %}
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 text-gray-100">
+            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
+          </svg>          
+          {% endfor %}
+        </div>
+        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+          <div class="sm:flex sm:items-start">
+            <div class="w-full">
+              <!-- reviews -->
+              <div class="-space-y-px rounded-md shadow-sm">
+                <div>
+                  <label for="password" class="sr-only">Review</label>
+                  <textarea name="review" id="review" rows="5" placeholder="Write a review" class="relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"></textarea>
+                </div>
               </div>
             </div>
-
+          </div>
         </div>
-
-        <ul class="flex flex-col gap-4 py-4 lg:max-w-3xl">
-
-            {% for review in db_reviews %}
-            <li class="flex flex-col gap-2 p-2">
-                <div class="flex items-center gap-3">
-                  <div class="h-10 w-10 overflow-hidden rounded-full">
-                    <img src="{{ review['sender_picture'] }}" alt="" class="bg-cover w-full h-full">
-                  </div>
-                  <p class="text-sm font-semibold">{{ review['sender'] }}</p>
-                </div>
-  
-                <div>
-                  <div class="flex items-center gap-1">
-                    {% for i in range(review['rate']) %}
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-2 h-2 fill-zinc-900">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
-                    </svg>      
-                    {% endfor %}
-                    {% for i in range(5 - (review['rate'])) %}
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-2 h-2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
-                    </svg>      
-                    {% endfor %}
-                    <p class="text-xs text-zinc-400 font-medium">{{ review['posted_at'] }}</p>
-                  </div>
-                </div>
-  
-                <p class="text-sm font-[450]">
-                    {{ review['review'] }}
-                </p>
-  
-            </li>
-            {% endfor %}
-
-            {% for review in all_reviews %}
-            <li class="flex flex-col gap-2 p-2">
-                <div class="flex items-center gap-3">
-                  <div class="h-10 w-10 overflow-hidden rounded-full">
-                    <img src="{{ review['profile'] }}" alt="" class="bg-cover w-full h-full">
-                  </div>
-                  <p class="text-sm font-semibold">{{ review['user'] }}</p>
-                </div>
-  
-                <div>
-                  <div class="flex items-center gap-1">
-                    {% for i in range(review['rating']) %}
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-2 h-2 fill-zinc-900">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
-                    </svg>   
-                    {% endfor %}
-                    {% for i in range(5 - review['rating']) %}
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-2 h-2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
-                    </svg>   
-                    {% endfor %}
-                    <p class="text-xs text-zinc-400 font-medium">{{ review['publish_date'] }}</p>
-                  </div>
-                </div>
-  
-                <p class="text-sm font-[450]">
-                    {{ review['review'] }}
-                </p>
-  
-            </li>
-            {% endfor %}
-        </ul>
-
-
-
-        <div>
-            <div class="p-2">
-              <h2 class="text-xl font-semibold">Rate this anime</h2>
-              <p class="text-sm font-medium text-zinc-400">Tell us what you think</p>
-            </div>
-
-            <button id="review-btn" class="rounded-lg p-2">
-              <p class="py-2 px-6 flex items-center gap-2 border border-zinc-900 hover:bg-zinc-800 hover:text-zinc-50 transition duration-300 rounded-lg text-sm font-semibold">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
-                </svg>
-                
-                
-                Write review
-              </p>
-            </button>
-
+        <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+          <button type="button" class="inline-flex w-full justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm">Send</button>
+          <button type="button" onclick="toggleReviewSection()"  class="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">Cancel</button>
         </div>
-    </section>
-</main>
+      </form>
+    </div>
+  </div>
+</div>
 {% endblock %}
 
-
-{% block link %}
-<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% block script %}
+<script>
+  function toggleReviewSection() {
+    document.getElementById("review-section").classList.toggle("invisible")
+    document.getElementById("review-modal-bg").classList.toggle("opacity-0");
+    document.getElementById("review-modal").classList.toggle("opacity-0");
+  }
+</script>
 {% endblock %}

@@ -111,6 +111,16 @@ def details(id):
     anime_details_api = requests.get(f"https://kitsu.io/api/edge/anime/{id}")
     anime_details = anime_details_api.json()
 
+    found_in_kitsu = db.execute("SELECT kitsu_id FROM anime WHERE id = ?", id)
+
+
+    if len(found_in_kitsu) == 0:
+        insert_query = "insert into anime (kitsu_id, en_title, favorite_count, poster_image, first_release) values (?,?,?,?,?)"
+        db.execute(
+            insert_query,
+            
+        )
+
     data_attributes = anime_details['data']['attributes']
 
     details = {
