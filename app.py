@@ -1,5 +1,6 @@
 import requests
-from flask import Flask, render_template, request, session, flash, redirect, url_for
+from datetime import datetime
+from flask import Flask, render_template, request, session, flash, redirect, url_for,jsonify
 from helpers import rating_percentage, avg_rating, avg_rating2
 from cs50 import SQL
 
@@ -25,12 +26,36 @@ oauth.register(
     server_metadata_url=f'https://{env.get("AUTH0_DOMAIN")}/.well-known/openid-configuration',
 )
 
-
+# setting up the database
+db = SQL(env.get("DATABASE_URL"))
 
 @app.route("/")
 def index():
     trending_endpoints = requests.get("https://kitsu.io/api/edge/trending/anime")
     trending = trending_endpoints.json()
+
+    if session:
+        # collect user data
+        user = {
+            "name": session.get('user')['userinfo']['name'],
+            "email": session.get('user')['userinfo']['email'],
+            "picture": session.get('user')['userinfo']['picture']
+        }
+
+        userInDb = db.execute("SELECT * FROM userdb WHERE _email = ?", user['email'])
+
+        registration = datetime.now()
+
+        # if user not in db yet
+        if len(userInDb) == 0:
+            db.execute(
+                "INSERT INTO userdb (_name, _email, first_login, picture) VALUES (?,?,?,?)", 
+                user['name'], 
+                user['email'],
+                registration.strftime("%B %d, %Y %I:%M %p"),
+                user['picture']
+            )
+    
     return render_template("index.html", trending = trending, session = session.get("user"))
 
 
@@ -90,6 +115,21 @@ def details(id):
         except:
             ...
 
+    
+    # db reviews
+    myreview_db = db.execute("SELECT * FROM review review WHERE anime_id = ?", id)
+    reviews = list()
+    for item in myreview_db:
+        user = db.execute("SELECT _name, picture from userdb where id = ?", item["sender_id"])
+
+        reviews.append({
+            "review": item["content"],
+            "sender": user[0]["_name"],
+            "sender_picture": user[0]["picture"],
+            "rate": int(item["rate"]),
+            "posted_at": item["posted_at"]
+        })
+
 
     return render_template(
         "details.html", 
@@ -97,8 +137,55 @@ def details(id):
         rating = rating, 
         total_avg = total_avg,
         review = review,
+        reviews = reviews,
         session = session.get("user")
     )
+
+
+
+@app.route("/send_review/<int:id>", methods = ["POST","GET"])
+def send_review(id):
+
+    if not request.method == "POST":
+        return "Use /post method instead"
+
+    review_sent = {
+        "content": request.form.get("review"),
+        "rate": request.form.get("rate"),
+        "anime_id": id
+    }
+
+    # user id
+    sender_id = db.execute(
+        "SELECT id FROM userdb WHERE _email = ?",
+        session.get("user")["userinfo"]["email"]
+    )
+
+    try:
+        # check in the db
+        reviewDB = db.execute(
+            "SELECT * FROM review WHERE sender_id = ? AND anime_id = ?", 
+            sender_id[0]['id'], 
+            review_sent["anime_id"]
+        )
+    except:
+        flash("Something went wrong during the operation")
+
+    # check if user already left a review
+    if len(reviewDB) > 0:
+        flash("You already left a review")
+
+
+    db.execute(
+        "INSERT INTO review (sender_id, anime_id, rate, content, posted_at) VALUES (?,?,?,?,?)", 
+        sender_id[0]['id'], 
+        review_sent["anime_id"], 
+        review_sent["rate"],
+        review_sent["content"],
+        datetime.now()
+    )
+   
+    return render_template("message.html")
 
 
 
