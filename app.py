@@ -169,11 +169,13 @@ def send_review(id):
             review_sent["anime_id"]
         )
     except:
-        flash("Something went wrong during the operation")
+        flash("Something went wrong during the operation", "error")
+        return render_template("message.html")
 
     # check if user already left a review
     if len(reviewDB) > 0:
-        flash("You already left a review")
+        flash("You already left a review", "error")
+        return render_template("message.html")
 
 
     db.execute(
@@ -185,6 +187,7 @@ def send_review(id):
         datetime.now()
     )
    
+    flash("Review sent successfully", "success")
     return render_template("message.html")
 
 

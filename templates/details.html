@@ -282,7 +282,7 @@
     });
   });
 
-  const msg = document.getElementById("message");
+
   document.getElementById("review-modal").addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -293,7 +293,8 @@
         const res = request.responseText;
         document.getElementById("message-section").innerHTML = request.responseText;
 
-        msg.classList.toggle("invisible");
+        document.getElementById("message-section").classList.remove("invisible");
+        document.getElementById("message").classList.remove("hidden");
         // close review
         toggleReviewSection();
       }
@@ -309,6 +310,11 @@
 
     request.send(review);
   });
+
+  function closeMessage() {
+    document.getElementById("message-section").classList.add("invisible");
+    document.getElementById("message").classList.add("hidden");
+  }
 
 </script>
 {% endblock %}
