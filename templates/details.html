@@ -291,7 +291,8 @@
     request.onload = () => {
       if (request.readyState == 4 && request.status == 200) {
         const res = request.responseText;
-        document.getElementById("message-section").innerHTML = request.responseText;
+
+        document.getElementById("message-section").innerHTML = res;
 
         document.getElementById("message-section").classList.remove("hidden");
         document.getElementById("message").classList.remove("invisible");

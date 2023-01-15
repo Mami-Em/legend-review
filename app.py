@@ -149,6 +149,10 @@ def send_review(id):
     if not request.method == "POST":
         return "Use /post method instead"
 
+    if not session.get("user"):
+        flash("Please Login first", "error")
+        return render_template("message.html")
+
     review_sent = {
         "content": request.form.get("review"),
         "rate": request.form.get("rate"),
