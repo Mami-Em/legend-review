@@ -293,8 +293,8 @@
         const res = request.responseText;
         document.getElementById("message-section").innerHTML = request.responseText;
 
-        document.getElementById("message-section").classList.remove("invisible");
-        document.getElementById("message").classList.remove("hidden");
+        document.getElementById("message-section").classList.remove("hidden");
+        document.getElementById("message").classList.remove("invisible");
         // close review
         toggleReviewSection();
       }
@@ -312,8 +312,8 @@
   });
 
   function closeMessage() {
-    document.getElementById("message-section").classList.add("invisible");
-    document.getElementById("message").classList.add("hidden");
+    document.getElementById("message-section").classList.add("hidden");
+    document.getElementById("message").classList.add("invisible");
   }
 
 </script>

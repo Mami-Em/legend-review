@@ -2,7 +2,7 @@
       {% if messages %}
         {% for category, message in messages %}
           {% if category == 'success' %}
-          <div id="message" class="bg-indigo-600 sticky top-0 z-50 hidden">
+          <div id="message" class="bg-indigo-600 sticky top-0 z-50 invisible">
             <div class="mx-auto max-w-7xl py-3 px-3 sm:px-6 lg:px-8">
               <div class="flex flex-wrap items-center justify-between">
                 <div class="flex w-0 flex-1 items-center">
@@ -33,7 +33,7 @@
           </div>
           {% else %}
 
-          <div id="message" class="bg-red-500 sticky top-0 z-50 hidden">
+          <div id="message" class="bg-red-500 sticky top-0 z-50 invisible">
             <div class="mx-auto max-w-7xl py-3 px-3 sm:px-6 lg:px-8">
               <div class="flex flex-wrap items-center justify-between">
                 <div class="flex w-0 flex-1 items-center">

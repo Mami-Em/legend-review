@@ -10,7 +10,7 @@
 </head>
 <body>
     
-  <div id="message-section" class="w-screen h-screen invisible absolute top-0"></div>
+  <div id="message-section" class="w-screen h-screen hidden absolute top-0"></div>
 
     <header class="isolate bg-white">
     
@@ -133,10 +133,10 @@
                     </div>
                   </div>
   
-                  <div class="mt-8">
+                  <form name="searchForm" class="mt-8">
                     <label for="search" class="sr-only">Search</label>
-                    <input id="search" name="anime" type="text" autocomplete="off" class="relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="anime title">
-                  </div>
+                    <input id="search" name="search" type="text" autocomplete="off" class="relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" placeholder="anime title">
+                  </form>
     
                   <div class="mt-8">
                     <div class="flow-root">
@@ -195,6 +195,12 @@
         document.getElementById('slideover-bg').classList.toggle('opacity-50');
         document.getElementById('slideover').classList.toggle('translate-x-full');
         document.getElementById('slideover').classList.toggle('translate-x-0');
+        if (document.getElementById("slideover-bg").classList.contains("invisible")) {
+          document.searchForm.search.value = "";
+        }
+        else {
+          document.searchForm.search.focus();
+        }
       }
       document.addEventListener("DOMContentLoaded", () => {
           // open mobile menu
